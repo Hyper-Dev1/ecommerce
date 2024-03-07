@@ -7,6 +7,10 @@
     font-style: normal;
 }
 
+$acentOne:#389c9a;
+$acentTwo:#FEDB71;
+
+$gray:#68696b;
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 300 to 700
 
@@ -14,7 +18,7 @@
 
 :root {
     font-size: 62.5%;
-    background-color: #FEF5EA;
+    // background-color: #FEF5EA;
     @include font(500);
 }
 
@@ -26,6 +30,7 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
+    user-select: none;
 
     .nav-logo {
         @include font(500);
@@ -45,13 +50,23 @@ nav {
             li {
                 margin: 0 1rem;
                 list-style: none;
-                width: 10rem;
-                text-align: center;
                 font-size: 1.5rem;
 
                 a {
+                    text-align: center;
+                    display: inline-block;
+                    width: 10rem;
+                    height: 3rem;
                     text-decoration: none;
                     color: black;
+
+                    &:hover {
+                        color: $acentOne;
+                    }
+
+                    &:active {
+                        color: $acentOne;
+                    }
                 }
             }
         }
@@ -74,15 +89,141 @@ nav {
     }
 }
 
+main {
+    .cta {
+        font-size: 1.6rem;
+        border: 0.1rem $acentTwo solid;
+        outline: 0;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        width: 15rem;
+        cursor: pointer;
+        transition: 300ms ease-in-out;
+        margin: 3rem 0 0 0;
+        background-color: $acentTwo;
+        color: black;
+        @include font(600);
+
+
+        &:hover {
+            font-size: 1.8rem;
+        }
+    }
+}
+
 .hero {
     margin: 2rem 0 0 0;
-    border: 1px black solid;
+    padding: 0 3rem;
+    display: flex;
     border-radius: 1rem;
     height: 70vh;
 
     .hero-text {
+        width: 50%;
+        margin: 10rem 0 0 10rem;
+
         h2 {
             font-size: 2.4rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: $gray;
+        }
+
+    }
+
+    .hero-img {
+        width: 50%;
+        // border: 1px black solid;
+
+        img {
+            width: 50rem;
+        }
+    }
+}
+
+.sale-items-cont {
+    // background-color: #ede0d4;
+    background-color: #ddbea9;
+    padding: 2rem 3rem;
+    border-radius: 2rem;
+    display: flex;
+    height: 25rem;
+    margin: 5rem 0 0 0;
+
+    .sale-text {
+        margin: 0 3rem 0 3rem;
+        h2 {
+            margin: 0;
+            font-size: 3rem;
+
+            span {
+                font-size: 1.6rem;
+                @include font(400);
+            }
+        }
+
+        p {
+            font-size: 1.3rem;
+            color: $gray;
+        }
+
+        hr {
+            height: 0.1rem;
+            background-color: red;
+            outline: 0;
+            border: 0;
+        }
+
+    }
+
+    .sale-items {
+        margin: 0 0 0 3rem;
+        display: flex;
+
+
+        .card {
+            margin: 0 0.5rem;
+            height: 23rem;
+            width: 20rem;
+            text-decoration: none;
+
+            .card-cont {
+                position: relative;
+                background-color: #ede0d4;
+                border-radius: 2rem;
+                padding: 0 0 1rem 0;
+
+                .card-img {
+
+                    img {
+                        width: 20rem;
+                    }
+                }
+
+                .card-desc {
+
+                    padding: 0 2rem;
+
+                    h3,
+                    p {
+                        font-size: 1.6rem;
+                        margin: 0.5rem 0;
+                        color: black;
+                    }
+
+                    h3 {
+                        font-weight: 500;
+                    }
+
+                    p {
+                        font-weight: 600;
+                    }
+
+                }
+            }
+
         }
     }
 }
@@ -101,6 +242,7 @@ footer {
 
             p {
                 font-size: 1.4rem;
+                color: $gray;
             }
         }
 
@@ -113,7 +255,7 @@ footer {
 
             input {
                 outline: none;
-                border: 1px black solid;
+                border: 1px $acentOne solid;
                 background-color: transparent;
                 @include font(500);
                 font-size: 1.4rem;
@@ -123,19 +265,21 @@ footer {
             }
 
             button {
-                outline: none;
-                border: 1px black solid;
-                background-color: transparent;
                 @include font(500);
-                font-size: 1.4rem;
-                width: 27.5rem;
-                margin: 0.5rem 0;
-                padding: 1rem 1rem;
-                transition: 300ms ease-in-out;
+                font-size: 1.6rem;
+                border: 0.1rem $acentOne solid;
+                background-color: transparent;
+                outline: 0;
+                padding: 1rem;
+                // border-radius: 0.5rem;
+                color: $acentOne;
+                width: 27rem;
                 cursor: pointer;
+                transition: 300ms ease-in-out;
+                margin: 1rem 0 0 0;
 
                 &:hover {
-                    background-color: black;
+                    background-color: $acentOne;
                     color: white;
                 }
             }
@@ -158,9 +302,21 @@ footer {
                 width: 9rem;
 
                 a {
+                    text-align: center;
+                    display: inline-block;
+                    width: 10rem;
+                    height: 3rem;
                     text-decoration: none;
-                    font-size: 1.3rem;
                     color: black;
+                    font-size: 1.3rem;
+
+                    &:hover {
+                        color: $acentOne;
+                    }
+
+                    &:active {
+                        color: $acentOne;
+                    }
                 }
             }
 

@@ -36,9 +36,91 @@ function App() {
       </nav>
       <main>
         <div className="hero">
-          <div className="hero-img"></div>
           <div className="hero-text">
-            <h2>hello</h2>
+            <h2>Comfortable Sofa with Great Comfort</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              consequuntur adipisci in, similique deleniti est reiciendis
+              ducimus illum ipsum? Blanditiis tenetur illum, corporis iusto qui
+              porro tempora non vero voluptates!
+            </p>
+            <button className="cta">Shop Now</button>
+          </div>
+          <div className="hero-img">
+            <img
+              src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div className="sale-items-cont">
+          <div className="sale-text">
+            <h2>
+              <span>On Sale</span>
+              <br />
+              Up to 20% Off
+            </h2>
+            <hr />
+            <p>Our entire October collection</p>
+            <button className="cta">Explore</button>
+          </div>
+          <div className="sale-items">
+            <a href="/" className="card">
+              <div className="card-cont">
+                <div className="card-img">
+                  <img
+                    src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
+                    alt="Product Image"
+                  />
+                </div>
+                <div className="card-desc">
+                  <h3>Product Name</h3>
+                  <p>Rs 00000</p>
+                </div>
+              </div>
+            </a>
+            <a href="/" className="card">
+              <div className="card-cont">
+                <div className="card-img">
+                  <img
+                    src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
+                    alt="Product Image"
+                  />
+                </div>
+                <div className="card-desc">
+                  <h3>Product Name</h3>
+                  <p>Rs 00000</p>
+                </div>
+              </div>
+            </a>
+            <a href="/" className="card">
+              <div className="card-cont">
+                <div className="card-img">
+                  <img
+                    src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
+                    alt="Product Image"
+                  />
+                </div>
+                <div className="card-desc">
+                  <h3>Product Name</h3>
+                  <p>Rs 00000</p>
+                </div>
+              </div>
+            </a>
+            <a href="/" className="card">
+              <div className="card-cont">
+                <div className="card-img">
+                  <img
+                    src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
+                    alt="Product Image"
+                  />
+                </div>
+                <div className="card-desc">
+                  <h3>Product Name</h3>
+                  <p>Rs 00000</p>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </main>
@@ -54,11 +136,7 @@ function App() {
             </p>
           </div>
           <form action="/">
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-            />
+            <input type="text" name="name" placeholder="Enter your name" />
             <input
               type="mail"
               name="email"
