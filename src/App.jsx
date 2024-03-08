@@ -1,5 +1,6 @@
-import Homepage from "./Components/Homepage"
-import Productpage from "./Components/Productpage"
+// import Homepage from "./Components/Homepage"
+// import Productpage from "./Components/Productpage"
+import Shipping from "./Components/Shipping"
 import "./scss/app.scss"
 
 function App() {
@@ -38,7 +39,8 @@ function App() {
       </nav>
       <main>
         {/* <Homepage /> */}
-        <Productpage />
+        {/* <Productpage /> */}
+        <Shipping />
       </main>
       <footer>
         <div className="newsletter">
