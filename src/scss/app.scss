@@ -9,10 +9,8 @@
 
 $acentOne:#389c9a;
 $acentTwo:#FEDB71;
-
 $gray:#68696b;
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 300 to 700
+
 
 
 
@@ -20,6 +18,7 @@ $gray:#68696b;
     font-size: 62.5%;
     // background-color: #FEF5EA;
     @include font(500);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -154,6 +153,7 @@ main {
 
     .sale-text {
         margin: 0 3rem 0 3rem;
+
         h2 {
             margin: 0;
             font-size: 3rem;
@@ -184,7 +184,7 @@ main {
 
 
         .card {
-            margin: 0 0.5rem;
+            margin: 0 1rem;
             height: 23rem;
             width: 20rem;
             text-decoration: none;
@@ -196,6 +196,7 @@ main {
                 padding: 0 0 1rem 0;
 
                 .card-img {
+                    text-align: center;
 
                     img {
                         width: 20rem;
@@ -224,6 +225,215 @@ main {
                 }
             }
 
+        }
+    }
+}
+
+.popular-grid-cont {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "sofa bed bed lamp"
+        "sofa armchair chair textile"
+        "mirror mirror chair decor";
+
+    .sofa {
+        grid-area: sofa;
+    }
+
+    .bed {
+        grid-area: bed;
+    }
+
+    .lamp {
+        grid-area: lamp;
+    }
+
+    .armchair {
+        grid-area: armchair;
+    }
+
+    .chair {
+        grid-area: chair;
+    }
+
+    .textile {
+        grid-area: textile;
+    }
+
+    .decor {
+        grid-area: decor;
+    }
+
+    .mirror {
+        grid-area: mirror;
+    }
+}
+
+.breadcrumbs {
+    p {
+        font-size: 1.4rem;
+        color: $gray;
+    }
+
+    span {
+        color: black;
+    }
+}
+
+.product-card {
+    display: flex;
+
+    .product-image {
+        width: 50%;
+    }
+
+    .product-desc {
+        padding: 0 2rem;
+        width: 50%;
+
+        h1 {
+            font-size: 2.4rem;
+            margin: 0 0 0 0;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: $gray;
+        }
+    }
+
+    .product-qty {
+        display: flex;
+        margin: 7rem 0 3rem 0;
+
+        h2 {
+            font-size: 1.6rem;
+            margin: 0 2rem 0 0;
+        }
+
+        button {
+            background-color: transparent;
+            outline: 0;
+            border: 0;
+            text-align: center;
+
+            img {
+                height: 1.6rem;
+            }
+        }
+
+        input {
+            background-color: transparent;
+            outline: 0;
+            border: 1px $gray solid;
+            width: 3rem;
+            height: 2rem;
+            text-align: center;
+            @include font(600);
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+            -moz-appearance: textfield;
+        }
+
+        input::-webkit-inner-spin-button,
+        input::-webkit-outer-spin-button,
+        input::-ms-clear {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+    }
+
+    .product-btn {
+        margin: 7rem 0 0 0;
+        display: flex;
+
+        button {
+            padding: 1rem;
+            outline: 0;
+            @include font(600);
+            font-size: 1.6rem;
+            margin: 0 2rem;
+            width: 20rem;
+            cursor: pointer;
+            transition: 300ms ease-in-out;
+            background-color: $acentTwo;
+            border: 0.1rem $acentTwo solid;
+
+            &:hover {
+                background-color: #e4c465;
+            }
+        }
+    }
+}
+
+.product-recommend {
+    text-decoration: none;
+    margin: 10rem 0 5rem 0;
+    // border: 1px black solid;
+
+    h2 {
+        font-size: 2.4rem;
+        text-align: center;
+        margin: 0 0 5rem 0;
+    }
+
+    .card-cont {
+        display: flex;
+        gap: 3rem;
+        margin: 0 0 0 6rem;
+
+        .main-card-cont {
+            text-decoration: none;
+
+            .main-card {
+                height: 30rem;
+                width: 25rem;
+                // border: 1px black solid;
+                border-radius: 0.5rem;
+                background-color: #E9E9ED;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                transition: 300ms background-color ease-in-out;
+
+                .card-img {
+                    text-align: center;
+                    margin: 0.5rem 0 0 0;
+
+                    img {
+                        width: 22rem;
+                    }
+                }
+
+                .card-desc {
+                    padding: 2rem 3rem;
+                    text-align: center;
+                    color: black;
+
+                    h3 {
+                        font-size: 1.6rem;
+                        margin: 0.5rem 0 0 0;
+                    }
+
+                    p {
+                        font-size: 1.4rem;
+                        margin: 0.5rem 0 0 0;
+                    }
+                }
+                &:hover{
+                    background-color: #C7C7D1;
+                }
+            }
         }
     }
 }
