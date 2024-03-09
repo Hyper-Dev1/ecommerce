@@ -1,6 +1,8 @@
 // import Homepage from "./Components/Homepage"
 // import Productpage from "./Components/Productpage"
-import Shipping from "./Components/Shipping"
+// import Shipping from "./Components/Shipping"
+// import Cart from "./Components/Cart"
+import Category from "./Components/Category"
 import "./scss/app.scss"
 
 function App() {
@@ -40,10 +42,12 @@ function App() {
       <main>
         {/* <Homepage /> */}
         {/* <Productpage /> */}
-        <Shipping />
+        {/* <Shipping /> */}
+        {/* <Cart /> */}
+        <Category />
       </main>
       <footer>
-        <div className="newsletter">
+        {/* <div className="newsletter">
           <div className="newsletter-info">
             <h3>Newsletter</h3>
             <p>
@@ -62,7 +66,7 @@ function App() {
             />
             <button type="submit">Submit</button>
           </form>
-        </div>
+        </div> */}
         <div className="footer-links">
           <p>&copy; Copyright Home Furniture 2023</p>
           <ul>

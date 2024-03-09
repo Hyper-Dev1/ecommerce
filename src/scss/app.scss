@@ -108,6 +108,45 @@ main {
             font-size: 1.8rem;
         }
     }
+
+    .cta-page {
+        font-size: 1.6rem;
+        border: 0.1rem $acentTwo solid;
+        outline: 0;
+        padding: 1rem 2.5rem;
+        border-radius: 0.3rem;
+        width: max-content;
+        cursor: pointer;
+        margin: 3rem 0 0 0;
+        background-color: $acentTwo;
+        color: black;
+        @include font(600);
+        transition: 300ms background-color ease-in-out;
+
+        &:hover {
+            background-color: #e4c465;
+        }
+    }
+
+    .non-focus-btn {
+        background-color: transparent;
+        text-decoration: underline;
+        border: 0.1rem transparent solid;
+        outline: 0;
+        @include font(600);
+        font-size: 1.5rem;
+        width: max-content;
+        cursor: pointer;
+        padding: 1rem 2.5rem;
+        margin: 3rem 0 0 0;
+        color: black;
+        @include font(600);
+        transition: 300ms ease-in-out;
+
+        &:hover {
+            border: 0.1rem black solid;
+        }
+    }
 }
 
 .hero {
@@ -430,11 +469,195 @@ main {
                         margin: 0.5rem 0 0 0;
                     }
                 }
-                &:hover{
+
+                &:hover {
                     background-color: #C7C7D1;
                 }
             }
         }
+    }
+}
+
+.shipping {
+    h2 {
+        font-size: 2.4rem;
+        // text-align: center;
+    }
+
+    hr {
+        // width: 100rem;
+        border: 0;
+        height: 0.1rem;
+        background-color: $gray;
+        outline: 0;
+    }
+
+    form {
+        margin: 7rem 0 0 0;
+        text-align: center;
+
+        .form-section {
+            margin: 0 10rem;
+
+            input {
+                @include font(500);
+                font-size: 1.5rem;
+                width: 30rem;
+                height: 4rem;
+                border: 0.1rem black solid;
+                outline: 0;
+                padding: 0 2rem;
+                margin: 1rem 2rem;
+            }
+        }
+
+        .btn-section {
+            padding: 4rem 10rem;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+    }
+}
+
+.cart {
+    margin: 7rem 0 0 0;
+
+    .cart-heading {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3rem 0 0;
+
+        .heading-title {
+            display: flex;
+
+            h1 {
+                font-size: 2.4rem;
+                margin: 0;
+            }
+
+            p {
+                margin: 1rem 0 0 3rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        .cart-total {
+            font-size: 2.4rem;
+            margin: 0;
+
+            span {
+                font-size: 1.5rem;
+                margin: 0 0 0 3rem;
+            }
+        }
+    }
+
+    .cart-items-cont {
+        // border: 1px black solid;
+        margin: 4rem 0 7rem  0 ;
+
+        .cart-item {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 2rem;
+            // border: 1px black solid;
+            height: 10rem;
+            border-radius: 0.5rem;
+            margin: 0 0 1rem 0;
+            background-color: #ebeaea;
+            
+            // &:hover{
+            //     background-color: #DDE0E3;
+            // }
+
+            .cart-item-heading {
+                display: flex;
+
+                .cart-item-img {
+
+                    img {
+                        height: 12rem;
+                    }
+                }
+
+                .cart-item-desc {
+                    margin: 2rem 0 0 1rem;
+
+                    h2 {
+                        font-size: 2rem;
+                        margin: 0.5rem 0;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                        margin: 0.5rem 0;
+                    }
+                }
+
+            }
+
+            .cart-qty {
+                display: flex;
+                margin: 3rem 0 0 0;
+                // border: 1px black solid;
+                height: 4rem;
+
+                h2 {
+                    font-size: 1.8rem;
+                    margin: 0 2rem 0 0;
+                    font-weight: 550;
+                }
+
+                button {
+                    background-color: transparent;
+                    outline: 0;
+                    border: 0;
+                    text-align: center;
+                    height: 2.5rem;
+
+                    img {
+                        height: 2rem;
+                    }
+                }
+
+                input {
+                    background-color: transparent;
+                    outline: 0;
+                    // border: 1px $gray solid;
+                    border: 0;
+                    width: 3rem;
+                    height: 2rem;
+                    text-align: center;
+                    @include font(600);
+                    -webkit-appearance: none;
+                    appearance: none;
+                    margin: 0;
+                    -moz-appearance: textfield;
+                    font-size: 1.6rem;
+                }
+
+                input::-webkit-inner-spin-button,
+                input::-webkit-outer-spin-button,
+                input::-ms-clear {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    margin: 0;
+                }
+            }
+
+        }
+
+        .price {
+            font-size: 2.4rem;
+            margin:0 2rem 0 0;
+        }
+        .close{
+            position: absolute;
+        }
+
     }
 }
 
