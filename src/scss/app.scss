@@ -7,6 +7,53 @@
     font-style: normal;
 }
 
+@mixin card() {
+    .main-card-cont {
+        text-decoration: none;
+
+        .main-card {
+            height: 30rem;
+            width: 25rem;
+            // border: 1px black solid;
+            border-radius: 0.5rem;
+            background-color: #E9E9ED;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 300ms background-color ease-in-out;
+
+            .card-img {
+                text-align: center;
+                margin: 0.5rem 0 0 0;
+
+                img {
+                    width: 22rem;
+                }
+            }
+
+            .card-desc {
+                padding: 2rem 3rem;
+                text-align: center;
+                color: black;
+
+                h3 {
+                    font-size: 1.6rem;
+                    margin: 0.5rem 0 0 0;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    margin: 0.5rem 0 0 0;
+                }
+            }
+
+            &:hover {
+                background-color: #C7C7D1;
+            }
+        }
+    }
+}
+
 $acentOne:#389c9a;
 $acentTwo:#FEDB71;
 $gray:#68696b;
@@ -431,50 +478,7 @@ main {
         gap: 3rem;
         margin: 0 0 0 6rem;
 
-        .main-card-cont {
-            text-decoration: none;
-
-            .main-card {
-                height: 30rem;
-                width: 25rem;
-                // border: 1px black solid;
-                border-radius: 0.5rem;
-                background-color: #E9E9ED;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                transition: 300ms background-color ease-in-out;
-
-                .card-img {
-                    text-align: center;
-                    margin: 0.5rem 0 0 0;
-
-                    img {
-                        width: 22rem;
-                    }
-                }
-
-                .card-desc {
-                    padding: 2rem 3rem;
-                    text-align: center;
-                    color: black;
-
-                    h3 {
-                        font-size: 1.6rem;
-                        margin: 0.5rem 0 0 0;
-                    }
-
-                    p {
-                        font-size: 1.4rem;
-                        margin: 0.5rem 0 0 0;
-                    }
-                }
-
-                &:hover {
-                    background-color: #C7C7D1;
-                }
-            }
-        }
+        @include card;
     }
 }
 
@@ -556,7 +560,7 @@ main {
 
     .cart-items-cont {
         // border: 1px black solid;
-        margin: 4rem 0 7rem  0 ;
+        margin: 4rem 0 7rem 0;
 
         .cart-item {
             position: relative;
@@ -568,7 +572,7 @@ main {
             border-radius: 0.5rem;
             margin: 0 0 1rem 0;
             background-color: #ebeaea;
-            
+
             // &:hover{
             //     background-color: #DDE0E3;
             // }
@@ -652,14 +656,132 @@ main {
 
         .price {
             font-size: 2.4rem;
-            margin:0 2rem 0 0;
+            margin: 0 2rem 0 0;
         }
-        .close{
+
+        .close {
             position: absolute;
         }
 
     }
 }
+
+.cat-hero {
+    display: flex;
+    justify-content: space-between;
+    // background-color: $gray;
+
+    .cat-hero-desc {
+        width: 50%;
+        margin: 10rem 0 0 10rem;
+
+        h2 {
+            font-size: 4rem;
+            margin: 0 0.5rem;
+        }
+
+        p {
+            margin: 0.5rem;
+        }
+    }
+
+    .cat-hero-img {
+        width: 50%;
+        // border: 1px black solid;
+        text-align: right;
+
+        img {
+            margin: 0 10rem 0 0;
+            width: 30rem;
+        }
+    }
+}
+
+.product-cont {
+    display: flex;
+    margin: 0 0 4rem 0;
+
+    .product-filter {
+        width: 25%;
+        border: 1px black solid;
+        margin: 0 4rem 0 0;
+    }
+
+    .product-tile {
+        width: 75%;
+
+        .product-hr-filter {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 4rem 0;
+            height: 3rem;
+
+            label {
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+
+            select {
+                @include font(500);
+                border: 0;
+                outline: 0;
+                font-size: 1.6rem;
+                margin: 0 0 0 1rem;
+                border-radius: 0;
+
+                option {
+                    border: 0;
+                    outline: 0;
+                    border-radius: 0;
+                }
+            }
+
+            .product-viewas {
+                // padding: 1rem 0 0 0;
+                text-align: center;
+
+                p {
+                    display: inline;
+                    font-size: 1.6rem;
+                    margin: 0 1rem 0 0;
+                }
+
+                button {
+                    background-color: transparent;
+                    margin: 0 0.5rem;
+                    padding: 0 0 0 0;
+                    outline: 0;
+                    @include font(500);
+                    border: 0;
+                    // border: 0.1rem black solid;
+                    text-align: center;
+                    height: 1.6rem;
+                    cursor: pointer;
+
+                    img {
+                        margin: 0;
+                        padding: 0;
+                        width: 2rem
+                    }
+                }
+            }
+        }
+    }
+
+    .product-item-cont {
+        @include card;
+        margin: 0 0 0 4rem;
+        display: flex;
+
+        .product-grid-view {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem 4rem;
+        }
+    }
+}
+
+
 
 footer {
     .newsletter {

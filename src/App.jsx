@@ -1,8 +1,9 @@
-// import Homepage from "./Components/Homepage"
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import Homepage from "./Components/Homepage"
 // import Productpage from "./Components/Productpage"
 // import Shipping from "./Components/Shipping"
 // import Cart from "./Components/Cart"
-import Category from "./Components/Category"
+// import Category from "./Components/Category"
 import "./scss/app.scss"
 
 function App() {
@@ -11,7 +12,6 @@ function App() {
       <nav>
         <div className="nav-logo">
           <h1>Home Furniture</h1>
-          {/* <img src="./vite.svg" alt="" /> */}
         </div>
         <div className="nav-link">
           <ul>
@@ -40,11 +40,11 @@ function App() {
         </div>
       </nav>
       <main>
-        {/* <Homepage /> */}
+        <Homepage />
         {/* <Productpage /> */}
         {/* <Shipping /> */}
         {/* <Cart /> */}
-        <Category />
+        {/* <Category /> */}
       </main>
       <footer>
         {/* <div className="newsletter">
