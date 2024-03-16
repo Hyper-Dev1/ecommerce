@@ -127,6 +127,8 @@ nav {
             font-size: 1.4rem;
             cursor: pointer;
             margin: 1rem 0 0 0;
+            width: 4rem;
+            align-items: center;
 
             &:hover {
                 background-color: white;
@@ -134,6 +136,109 @@ nav {
         }
     }
 }
+
+.popular {
+    margin: 2rem 4rem;
+
+    h2 {
+        font-size: 2.8rem;
+        margin: 2rem 4rem;
+    }
+
+    .popular-grid-cont {
+        margin: 2rem 0rem;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "sofa bed bed lamp"
+            "sofa armchair chair textile"
+            "mirror mirror chair decor";
+
+        .item-height {
+            height: 30rem;
+        }
+
+        a {
+            position: relative;
+            overflow: hidden;
+
+            &:hover .opaque {
+                display: block;
+                transition: 1s ease-in-out;
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+            }
+
+            .opaque {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: #e4c465;
+                opacity: 100%;
+                display: none;
+            }
+        }
+
+        h3 {
+            position: absolute;
+            top: 0;
+            left: 2rem;
+            font-size: 1.6rem;
+            color: black;
+            background-color: #e4c465b6;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .sofa {
+            grid-area: sofa;
+        }
+
+        .bed {
+            grid-area: bed;
+        }
+
+        .lamp {
+            grid-area: lamp;
+        }
+
+        .armchair {
+            grid-area: armchair;
+        }
+
+        .chair {
+            grid-area: chair;
+        }
+
+        .textile {
+            grid-area: textile;
+        }
+
+        .decor {
+            grid-area: decor;
+        }
+
+        .mirror {
+            grid-area: mirror;
+            // height: 20rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+    }
+}
+
+
 
 main {
     .cta {
@@ -147,9 +252,12 @@ main {
         transition: 300ms ease-in-out;
         margin: 3rem 0 0 0;
         background-color: $acentTwo;
-        color: black;
         @include font(600);
 
+        a {
+            text-decoration: none;
+            color: black;
+        }
 
         &:hover {
             font-size: 1.8rem;
@@ -203,27 +311,31 @@ main {
     border-radius: 1rem;
     height: 70vh;
 
-    .hero-text {
-        width: 50%;
-        margin: 10rem 0 0 10rem;
+    .corousel-item {
+        display: flex;
 
-        h2 {
-            font-size: 2.4rem;
+        .hero-text {
+            width: 50%;
+            margin: 10rem 0 0 10rem;
+
+            h2 {
+                font-size: 2.4rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color: $gray;
+            }
+
         }
 
-        p {
-            font-size: 1.6rem;
-            color: $gray;
-        }
+        .hero-img {
+            width: 50%;
+            // border: 1px black solid;
 
-    }
-
-    .hero-img {
-        width: 50%;
-        // border: 1px black solid;
-
-        img {
-            width: 50rem;
+            img {
+                width: 50rem;
+            }
         }
     }
 }
@@ -315,49 +427,7 @@ main {
     }
 }
 
-.popular-grid-cont {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "sofa bed bed lamp"
-        "sofa armchair chair textile"
-        "mirror mirror chair decor";
 
-    .sofa {
-        grid-area: sofa;
-    }
-
-    .bed {
-        grid-area: bed;
-    }
-
-    .lamp {
-        grid-area: lamp;
-    }
-
-    .armchair {
-        grid-area: armchair;
-    }
-
-    .chair {
-        grid-area: chair;
-    }
-
-    .textile {
-        grid-area: textile;
-    }
-
-    .decor {
-        grid-area: decor;
-    }
-
-    .mirror {
-        grid-area: mirror;
-    }
-}
 
 .breadcrumbs {
     p {
@@ -875,6 +945,9 @@ footer {
                 }
             }
 
+        }
+        .footer-socials{
+            width: 25rem;
         }
     }
 }
