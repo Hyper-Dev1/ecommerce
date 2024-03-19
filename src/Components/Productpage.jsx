@@ -45,11 +45,11 @@ const Productpage = () => {
           <div className="product-qty">
             <h2>QTY</h2>
             <button>
-              <img src="./Assets/add.svg" alt="" />
+              <img src="/Assets/add.svg" alt="" />
             </button>
             <input type="number" />
             <button>
-              <img src="./Assets/minus.svg" alt="" />
+              <img src="/Assets/minus.svg" alt="" />
             </button>
           </div>
           <div className="product-btn">

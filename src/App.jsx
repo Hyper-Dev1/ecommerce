@@ -5,6 +5,8 @@ import Productpage from "./Components/Productpage"
 import Cart from "./Components/Cart"
 import Category from "./Components/Category"
 import "./scss/app.scss"
+import Wishlist from "./Components/Wishlist"
+import Search from "./Components/Search"
 
 function App() {
   return (
@@ -45,7 +47,7 @@ function App() {
               </Link>
             </button>
             <button>
-              <Link to="/">
+              <Link to="/shop/search">
                 <img src="/Assets/search-normal-1.svg" alt="Search" />
               </Link>
             </button>
@@ -61,7 +63,8 @@ function App() {
           <Route path="/shop/category" Component={Category} />
           <Route path="/shop/product/all" Component={Category} />
           <Route path="/shop/cart" Component={Cart} />
-          <Route path="/shop/wishlist" Component={Cart} />
+          <Route path="/shop/search" Component={Search} />
+          <Route path="/shop/wishlist" Component={Wishlist} />
           <Route path="/shop/product/id=23" Component={Productpage} />
           <Route path="/shop/product/sale" Component={Category} />
           <Route path="/shop/category/categoryname" Component={Category} />

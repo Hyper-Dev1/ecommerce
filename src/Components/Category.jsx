@@ -1,4 +1,7 @@
 // import React from 'react'
+import { Link } from "react-router-dom"
+// import Searchbar from "./Searchbar"
+import Search from "./Search"
 
 const Category = () => {
   return (
@@ -19,6 +22,7 @@ const Category = () => {
           />
         </div>
       </div>
+      <Search />
       <div className="product-cont">
         {/* <div className="filter-container">
           <h2>Filter Products</h2>
@@ -54,12 +58,84 @@ const Category = () => {
         </div> */}
 
         <div className="product-filter">
-          <h2>Categories</h2>
-          <ul>
-            <li>Chairs</li>
-            <li>Armchairs</li>
-          </ul>
-          
+          <div className="category">
+            <h2>Categories</h2>
+            <ul>
+              <li>
+                <Link to="/shop/category/categoryname">Chairs</Link>
+              </li>
+              <li>
+                <Link to="/shop/category/categoryname">Armchairs</Link>
+              </li>
+              <li>
+                <Link to="/shop/category/categoryname">Sofa</Link>
+              </li>
+              <li>
+                <Link to="/shop/category/categoryname">Lamp</Link>
+              </li>
+              <li>
+                <Link to="/shop/category/categoryname">Textile</Link>
+              </li>
+              <li>
+                <Link to="/shop/category/categoryname">Bedroom</Link>
+              </li>
+              <li>
+                <Link to="/shop/category/categoryname">Mirror</Link>
+              </li>
+              <li>
+                <Link to="/shop/category/categoryname">Decoration</Link>
+              </li>
+            </ul>
+          </div>
+          <form action="">
+            <div className="filter-header">
+              <h2>Filter By</h2>
+              <button type="submit">Filter</button>
+            </div>
+            <div className="filter-cont">
+              {/* <div className="filter-range">
+                <label htmlFor="range">
+                  <p>Price Range</p>
+                </label>
+                <input type="number" name="min" id="" placeholder="MIN" />
+                <input type="number" name="min" id="" placeholder="MAX" />
+              </div> */}
+              <div className="filter-select-box">
+                <label htmlFor="materials">
+                  <p>Materials</p>
+                </label>
+                <div className="filter-checkbox">
+                  <input type="checkbox" name="materials" value="Leather" />
+                  <span>Leather</span>
+                </div>
+                <div className="filter-checkbox">
+                  <input type="checkbox" name="materials" value="metal" />
+                  <span>Metal</span>
+                </div>
+                <div className="filter-checkbox">
+                  <input type="checkbox" name="materials" value="Fabric" />
+                  <span>Fabric</span>
+                </div>
+                <div className="filter-checkbox">
+                  <input type="checkbox" name="materials" value="Plastic" />
+                  <span>Plastic</span>
+                </div>
+              </div>
+              <div className="filter-select-box">
+                <label htmlFor="materials">
+                  <p>Brand</p>
+                </label>
+                <div className="filter-checkbox">
+                  <input type="checkbox" name="materials" value="Leather" />
+                  <span>Leather</span>
+                </div>
+                <div className="filter-checkbox">
+                  <input type="checkbox" name="materials" value="metal" />
+                  <span>Metal</span>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
         <div className="product-tile">
           <div className="product-hr-filter">
@@ -82,7 +158,7 @@ const Category = () => {
           </div>
           <div className="product-item-cont">
             <div className="product-grid-view">
-              <a href="/" className="main-card-cont">
+              <Link to="/shop/product/id=23" className="main-card-cont">
                 <div className="main-card">
                   <div className="card-img">
                     <img
@@ -95,8 +171,8 @@ const Category = () => {
                     <p>Rs 000</p>
                   </div>
                 </div>
-              </a>
-              <a href="/" className="main-card-cont">
+              </Link>
+              <Link to="/shop/product/id=23" className="main-card-cont">
                 <div className="main-card">
                   <div className="card-img">
                     <img
@@ -109,8 +185,8 @@ const Category = () => {
                     <p>Rs 000</p>
                   </div>
                 </div>
-              </a>
-              <a href="/" className="main-card-cont">
+              </Link>
+              <Link to="/shop/product/id=23" className="main-card-cont">
                 <div className="main-card">
                   <div className="card-img">
                     <img
@@ -123,8 +199,8 @@ const Category = () => {
                     <p>Rs 000</p>
                   </div>
                 </div>
-              </a>
-              <a href="/" className="main-card-cont">
+              </Link>
+              <Link to="/shop/product/id=23" className="main-card-cont">
                 <div className="main-card">
                   <div className="card-img">
                     <img
@@ -137,8 +213,8 @@ const Category = () => {
                     <p>Rs 000</p>
                   </div>
                 </div>
-              </a>
-              <a href="/" className="main-card-cont">
+              </Link>
+              <Link to="/shop/product/id=23" className="main-card-cont">
                 <div className="main-card">
                   <div className="card-img">
                     <img
@@ -151,8 +227,8 @@ const Category = () => {
                     <p>Rs 000</p>
                   </div>
                 </div>
-              </a>
-              <a href="/" className="main-card-cont">
+              </Link>
+              <Link to="/shop/product/id=23" className="main-card-cont">
                 <div className="main-card">
                   <div className="card-img">
                     <img
@@ -165,8 +241,8 @@ const Category = () => {
                     <p>Rs 000</p>
                   </div>
                 </div>
-              </a>
-              <a href="/" className="main-card-cont">
+              </Link>
+              <Link to="/shop/product/id=23" className="main-card-cont">
                 <div className="main-card">
                   <div className="card-img">
                     <img
@@ -179,8 +255,8 @@ const Category = () => {
                     <p>Rs 000</p>
                   </div>
                 </div>
-              </a>
-              <a href="/" className="main-card-cont">
+              </Link>
+              <Link to="/shop/product/id=23" className="main-card-cont">
                 <div className="main-card">
                   <div className="card-img">
                     <img
@@ -193,35 +269,7 @@ const Category = () => {
                     <p>Rs 000</p>
                   </div>
                 </div>
-              </a>
-              <a href="/" className="main-card-cont">
-                <div className="main-card">
-                  <div className="card-img">
-                    <img
-                      src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
-                      alt=""
-                    />
-                  </div>
-                  <div className="card-desc">
-                    <h3>Product Name</h3>
-                    <p>Rs 000</p>
-                  </div>
-                </div>
-              </a>
-              <a href="/" className="main-card-cont">
-                <div className="main-card">
-                  <div className="card-img">
-                    <img
-                      src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
-                      alt=""
-                    />
-                  </div>
-                  <div className="card-desc">
-                    <h3>Product Name</h3>
-                    <p>Rs 000</p>
-                  </div>
-                </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

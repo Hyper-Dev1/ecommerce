@@ -772,13 +772,124 @@ main {
     margin: 0 0 4rem 0;
 
     .product-filter {
-        width: 25%;
-        border: 1px black solid;
-        margin: 0 4rem 0 0;
+        width: 15%;
+        // border: 1px black solid;
+        margin: 0 0 0 0;
+
+        .category {
+            margin: 0 0 2rem 0;
+
+            a {
+                color: black;
+                user-select: none;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        ul {
+            margin: 4rem 0 0 0;
+            padding: 0 0 0 3rem;
+
+            li {
+                font-size: 1.4rem;
+                list-style: none;
+                height: 3rem;
+                font-weight: 550;
+
+                &:nth-child(9) {
+                    text-decoration: underline;
+
+                    &::before {
+                        content: " ";
+                        display: inline-block;
+                        margin-right: 0.5rem;
+                        background-color: black;
+                        height: 1.5rem;
+                        width: 1.5rem;
+                        padding: 0 0 0 0;
+                    }
+                }
+            }
+        }
+
+        form {
+            // width: 19rem;
+            // width: 100%;
+            margin: 0;
+            padding: 0;
+
+            .filter-header {
+                display: flex;
+                justify-content: space-between;
+
+                h2 {
+                    padding: 0.5rem 0;
+                }
+
+                button {
+                    outline: 0;
+                    @include font(600);
+                    font-size: 1.6rem;
+                    width: max-content;
+                    padding: 0 2rem;
+                    height: 3rem;
+                    cursor: pointer;
+                    transition: 300ms ease-in-out;
+                    background-color: $acentTwo;
+                    border: 0.1rem $acentTwo solid;
+
+                    &:hover {
+                        background-color: #e4c465;
+                    }
+                }
+            }
+
+            .filter-cont {
+                padding: 0 0 0 3rem;
+                margin: 2rem 0 0 0;
+
+                label {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    font-weight: 600;
+                }
+
+                span {
+                    font-size: 1.4rem;
+                }
+
+                .filter-range {
+                    p {
+                        margin: 0.5rem 0;
+                    }
+                }
+
+                .filter-select-box {
+                    p {
+                        margin: 0.5rem 0;
+                        font-size: 1.5rem;
+                    }
+
+                    .filter-checkbox {
+                        height: 3rem;
+                    }
+                }
+            }
+        }
     }
 
     .product-tile {
-        width: 75%;
+        width: 85%;
 
         .product-hr-filter {
             display: flex;
@@ -814,6 +925,7 @@ main {
                     display: inline;
                     font-size: 1.6rem;
                     margin: 0 1rem 0 0;
+                    font-weight: 600;
                 }
 
                 button {
@@ -840,18 +952,117 @@ main {
 
     .product-item-cont {
         @include card;
-        margin: 0 0 0 4rem;
+        margin: 0 10rem;
         display: flex;
+        text-align: center;
 
         .product-grid-view {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem 4rem;
+            gap: 2.5rem 2.5rem;
         }
     }
 }
 
+.search {
+    position: relative;
+    margin: 0 0 0 25%;
+    // text-align: center;
+    // width: 100%;
+    height: 6rem;
 
+    input {
+        &:not(:placeholder-shown)~.search-suggestion {
+            border: 0.1rem #e4c465 solid;
+            background-color: black;
+        }
+    }
+
+    .search-bar {
+        width: 60rem;
+        border: 0.15rem black solid;
+        border-radius: 2rem;
+        padding: 0 0.5rem 0 0.9rem;
+
+        form {
+            height: 3rem;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.25rem 0;
+
+            img {
+                width: 2.4rem;
+            }
+
+            input {
+                width: 100%;
+                height: 3rem;
+                margin: 0;
+                padding: 0 1rem;
+                background-color: transparent;
+                border: 0;
+                outline: 0;
+                @include font(600);
+                font-size: 1.6rem;
+
+                &:placeholder-shown+button {
+                    display: none;
+                }
+
+            }
+
+            button {
+                border-radius: 50%;
+                outline: 0;
+                border: 0;
+                background-color: transparent;
+                cursor: pointer;
+
+                img {
+                    transform: rotate(45deg);
+                    // width: 1.6rem;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+        }
+    }
+
+    .search-suggestion {
+        position: absolute;
+        margin: 0.5rem 0 0 0;
+        border: 1px $gray solid;
+        border-radius: 2rem;
+        width: 61rem;
+        background-color: #E9E9ED;
+        // display: none;
+
+        .suggestion-item {
+            display: flex;
+            margin: 1rem 0.5rem 0.5rem 0.5rem;
+            padding: 0.5rem 0.5rem 0 0.9rem;
+            border-radius: 1rem;
+            height: 3rem;
+
+            p {
+                padding: 0.20rem 1rem;
+                font-size: 1.5rem;
+                margin: 0;
+                font-weight: 600;
+            }
+
+            img {
+                height: 2.4rem;
+            }
+
+            &:hover {
+                background-color: #C7C7D1;
+
+            }
+        }
+    }
+}
 
 footer {
     .newsletter {
@@ -946,7 +1157,8 @@ footer {
             }
 
         }
-        .footer-socials{
+
+        .footer-socials {
             width: 25rem;
         }
     }
