@@ -9,6 +9,8 @@ import Wishlist from "./Components/Wishlist"
 import Search from "./Components/Search"
 
 function App() {
+  
+
   return (
     <>
       <Router>
@@ -110,8 +112,7 @@ function App() {
                 <a href="/">Trending</a>
               </li>
             </ul>
-            <div className="footer-socials">
-            </div>
+            <div className="footer-socials"></div>
           </div>
         </footer>
       </Router>

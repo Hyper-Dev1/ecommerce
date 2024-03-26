@@ -31,7 +31,7 @@ const Productpage = () => {
           <p>Category</p>
           <h2>$142</h2>
           <p>
-            H - <span>25</span>cm W - <span>25</span>cm D - <span>25</span>cm{" "}
+            H - <span>25</span>cm W - <span>25</span>cm D - <span>25</span>cm
             <br />
             <br />
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
