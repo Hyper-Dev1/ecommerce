@@ -1,5 +1,22 @@
 import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+import axios from "axios"
+import Salecard from "./Salecard"
+
 const Homepage = () => {
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/products")
+      .then((response) => {
+        setProducts(response.data)
+      })
+      .catch((error) => {
+        console.error("Error fetching products:", error)
+      })
+  }, [])
+  const saleitem = products.filter((item) => item.Discount < 20).slice(0, 4)
   return (
     <main>
       <div className="hero">
@@ -38,7 +55,17 @@ const Homepage = () => {
           </button>
         </div>
         <div className="sale-items">
-          <Link to="/shop/product/id=23" className="card">
+          {saleitem.map((product) => (
+            <Salecard
+              key={product.id}
+              linkkey={product.id}
+              code={product.ProductCode}
+              image={product.Image1}
+              name={product.ProductName}
+              price={product.Price}
+            />
+          ))}
+          {/* <Link to="/shop/product/id=23" className="card">
             <div className="card-cont">
               <div className="card-img">
                 <img
@@ -51,49 +78,7 @@ const Homepage = () => {
                 <p>Rs 00000</p>
               </div>
             </div>
-          </Link>
-          <Link to="/shop/product/id=23" className="card">
-            <div className="card-cont">
-              <div className="card-img">
-                <img
-                  src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
-                  alt="Product Image"
-                />
-              </div>
-              <div className="card-desc">
-                <h3>Product Name</h3>
-                <p>Rs 00000</p>
-              </div>
-            </div>
-          </Link>
-          <Link to="/shop/product/id=23" className="card">
-            <div className="card-cont">
-              <div className="card-img">
-                <img
-                  src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
-                  alt="Product Image"
-                />
-              </div>
-              <div className="card-desc">
-                <h3>Product Name</h3>
-                <p>Rs 00000</p>
-              </div>
-            </div>
-          </Link>
-          <Link to="/shop/product/id=23" className="card">
-            <div className="card-cont">
-              <div className="card-img">
-                <img
-                  src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
-                  alt="Product Image"
-                />
-              </div>
-              <div className="card-desc">
-                <h3>Product Name</h3>
-                <p>Rs 00000</p>
-              </div>
-            </div>
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className="popular">

@@ -67,7 +67,7 @@ function App() {
           <Route path="/shop/cart" Component={Cart} />
           <Route path="/shop/search" Component={Search} />
           <Route path="/shop/wishlist" Component={Wishlist} />
-          <Route path="/shop/product/id=23" Component={Productpage} />
+          <Route path="/shop/product/:id" Component={Productpage} />
           <Route path="/shop/product/sale" Component={Category} />
           <Route path="/shop/category/categoryname" Component={Category} />
         </Routes>
