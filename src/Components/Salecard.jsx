@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const Salecard = ({ code, linkkey, name, image, price }) => {
+const Salecard = ({ cat, code, linkkey, name, image, price }) => {
   return (
     <Link to={`/shop/product/${linkkey}`} className="card" key={code}>
       <div className="card-cont">

@@ -9,8 +9,6 @@ import Wishlist from "./Components/Wishlist"
 import Search from "./Components/Search"
 
 function App() {
-  
-
   return (
     <>
       <Router>

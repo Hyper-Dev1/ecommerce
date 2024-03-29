@@ -63,6 +63,7 @@ const Homepage = () => {
               image={product.Image1}
               name={product.ProductName}
               price={product.Price}
+              // cat={product.Category}
             />
           ))}
           {/* <Link to="/shop/product/id=23" className="card">
