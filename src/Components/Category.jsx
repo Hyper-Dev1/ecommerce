@@ -16,10 +16,11 @@ const Category = () => {
           </div>
         </div>
         <div className="cat-hero-img">
-          <img
+          {/* <img
             src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
             alt=""
-          />
+          /> */}
+          <img src="\Assets\img.png" alt="" />
         </div>
       </div>
       <Search />
@@ -62,28 +63,31 @@ const Category = () => {
             <h2>Categories</h2>
             <ul>
               <li>
-                <Link to="/shop/category/categoryname">Chairs</Link>
+                <Link to="/shop/category">All Category</Link>
               </li>
               <li>
-                <Link to="/shop/category/categoryname">Armchairs</Link>
+                <Link to="/shop/category/chairs">Chairs</Link>
               </li>
               <li>
-                <Link to="/shop/category/categoryname">Sofa</Link>
+                <Link to="/shop/category/armchairs">Armchairs</Link>
               </li>
               <li>
-                <Link to="/shop/category/categoryname">Lamp</Link>
+                <Link to="/shop/category/sofa">Sofa</Link>
               </li>
               <li>
-                <Link to="/shop/category/categoryname">Textile</Link>
+                <Link to="/shop/category/lamp">Lamp</Link>
               </li>
               <li>
-                <Link to="/shop/category/categoryname">Bedroom</Link>
+                <Link to="/shop/category/textile">Textile</Link>
               </li>
               <li>
-                <Link to="/shop/category/categoryname">Mirror</Link>
+                <Link to="/shop/category/bedroom">Bedroom</Link>
               </li>
               <li>
-                <Link to="/shop/category/categoryname">Decoration</Link>
+                <Link to="/shop/category/mirror">Mirror</Link>
+              </li>
+              <li>
+                <Link to="/shop/category/decoration">Decoration</Link>
               </li>
             </ul>
           </div>

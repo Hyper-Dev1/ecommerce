@@ -11,7 +11,7 @@ import Search from "./Components/Search"
 function App() {
   return (
     <>
-      <Router>
+      <Router scrollRestoration="false">
         <nav>
           <div className="nav-logo">
             <h1>Home Furniture</h1>
@@ -22,16 +22,13 @@ function App() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/shop/category">Catalog</Link>
-              </li>
-              <li>
                 <Link to="/shop/product/all">All Products</Link>
               </li>
               <li>
-                <a href="/">New Arrival</a>
+                <Link to="/shop/product/trending">Trending</Link>
               </li>
               <li>
-                <a href="/">Trending</a>
+                <Link to="/shop/product/latest">Latest</Link>
               </li>
             </ul>
           </div>
@@ -66,31 +63,10 @@ function App() {
           <Route path="/shop/search" Component={Search} />
           <Route path="/shop/wishlist" Component={Wishlist} />
           <Route path="/shop/product/:id" Component={Productpage} />
-          <Route path="/shop/product/sale" Component={Category} />
-          <Route path="/shop/category/categoryname" Component={Category} />
+          <Route path="/shop/sale" Component={Category} />
+          <Route path="/shop/category/:catname" Component={Category} />
         </Routes>
         <footer>
-          <hr />
-          <div className="newsletter">
-            <div className="newsletter-info">
-              <h3>Newsletter</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ut
-                enim non, nemo optio, perspiciatis sit ipsa qui doloremque,
-                quibusdam asperiores provident iusto nisi delectus quis in
-                eaque! Eligendi, placeat.
-              </p>
-            </div>
-            <form action="/">
-              <input type="text" name="name" placeholder="Enter your name" />
-              <input
-                type="mail"
-                name="email"
-                placeholder="Enter your email address"
-              />
-              <button type="submit">Submit</button>
-            </form>
-          </div>
           <div className="footer-links">
             <p>&copy; Copyright Home Furniture 2023</p>
             <ul>

@@ -34,10 +34,7 @@ const Homepage = () => {
             </button>
           </div>
           <div className="hero-img">
-            <img
-              src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
-              alt=""
-            />
+            <img src="\Assets\sofa img.png" alt="" />
           </div>
         </div>
       </div>
@@ -51,7 +48,7 @@ const Homepage = () => {
           <hr />
           <p>Our entire October collection</p>
           <button className="cta">
-            <Link to="/shop/product/sale">Explore</Link>
+            <Link to="/shop/sale">Explore</Link>
           </button>
         </div>
         <div className="sale-items">
@@ -85,45 +82,60 @@ const Homepage = () => {
       <div className="popular">
         <h2>Popular</h2>
         <div className="popular-grid-cont">
-          <Link to="/shop/category/categoryname" className="sofa">
+          <Link to="/shop/category/sofa" className="sofa">
             <img src="/Assets/category/sofa.jpg" alt="image" />
             <h3>Sofa</h3>
           </Link>
-          <Link to="/shop/category/categoryname" className="item-height bed">
+          <Link to="/shop/category/bedroom" className="item-height bed">
             <img src="/Assets/category/bedroom.jpg" alt="image" />
             <h3>Bedroom</h3>
           </Link>
-          <Link to="/shop/category/categoryname" className="item-height lamp">
+          <Link to="/shop/category/lamp" className="item-height lamp">
             <img src="/Assets/category/lamp.jpg" alt="image" />
             <h3>Lamp</h3>
           </Link>
-          <Link
-            to="/shop/category/categoryname"
-            className="item-height armchair"
-          >
+          <Link to="/shop/category/armchair" className="item-height armchair">
             <img src="/Assets/category/armchair.jpg" alt="image" />
             <h3>Armchair</h3>
           </Link>
-          <Link to="/shop/category/categoryname" className="chair">
+          <Link to="/shop/category/chair" className="chair">
             <img src="/Assets/category/chair.jpg" alt="image" />
             <h3>Chair</h3>
           </Link>
-          <Link
-            to="/shop/category/categoryname"
-            className="item-height textile"
-          >
+          <Link to="/shop/category/textile" className="item-height textile">
             <img src="/Assets/category/textile.jpg" alt="image" />
             <h3>Textile</h3>
           </Link>
-          <Link to="/shop/category/categoryname" className="item-height decor">
+          <Link to="/shop/category/decor" className="item-height decor">
             <img src="/Assets/category/decor.jpg" alt="image" />
             <h3>Decoration</h3>
           </Link>
-          <Link to="/shop/category/categoryname" className="item-height mirror">
+          <Link to="/shop/category/mirror" className="item-height mirror">
             <img src="/Assets/category/mirror.jpg" alt="image" />
             <h3>Mirror</h3>
           </Link>
         </div>
+      </div>
+        <hr />
+      <div className="newsletter">
+        <div className="newsletter-info">
+          <h3>Newsletter</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ut
+            enim non, nemo optio, perspiciatis sit ipsa qui doloremque,
+            quibusdam asperiores provident iusto nisi delectus quis in eaque!
+            Eligendi, placeat.
+          </p>
+        </div>
+        <form action="/">
+          <input type="text" name="name" placeholder="Enter your name" />
+          <input
+            type="mail"
+            name="email"
+            placeholder="Enter your email address"
+          />
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </main>
   )

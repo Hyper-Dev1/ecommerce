@@ -305,6 +305,63 @@ main {
     }
 }
 
+.newsletter {
+    display: flex;
+
+    .newsletter-info {
+        width: 50%;
+        padding: 0 0 0 15%;
+
+        h3 {
+            font-size: 2.4rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: $gray;
+        }
+    }
+
+    form {
+        margin: 3rem 10rem;
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            outline: none;
+            border: 1px $acentOne solid;
+            background-color: transparent;
+            @include font(500);
+            font-size: 1.4rem;
+            width: 25rem;
+            margin: 0.5rem 0;
+            padding: 1rem 1rem;
+        }
+
+        button {
+            @include font(500);
+            font-size: 1.6rem;
+            border: 0.1rem $acentOne solid;
+            background-color: transparent;
+            outline: 0;
+            padding: 1rem;
+            // border-radius: 0.5rem;
+            color: $acentOne;
+            width: 27rem;
+            cursor: pointer;
+            transition: 300ms ease-in-out;
+            margin: 1rem 0 0 0;
+
+            &:hover {
+                background-color: $acentOne;
+                color: white;
+            }
+        }
+    }
+}
+
 .hero {
     margin: 2rem 0 0 0;
     padding: 0 3rem;
@@ -335,7 +392,7 @@ main {
             // border: 1px black solid;
 
             img {
-                width: 50rem;
+                width: 40rem;
             }
         }
     }
@@ -478,7 +535,7 @@ main {
                 border: 0;
                 outline: 0;
 
-                &:hover{
+                &:hover {
                     border: 1px black solid;
                 }
             }
@@ -785,6 +842,7 @@ main {
     display: flex;
     justify-content: space-between;
     // background-color: $gray;
+    // background-color: #E6E7E1;
 
     .cat-hero-desc {
         width: 50%;
@@ -808,6 +866,7 @@ main {
         img {
             margin: 0 10rem 0 0;
             width: 30rem;
+            // mix-blend-mode: multiply ;
         }
     }
 }
@@ -851,19 +910,19 @@ main {
                 height: 3rem;
                 font-weight: 550;
 
-                &:nth-child(9) {
-                    text-decoration: underline;
+                // &:nth-child(9) {
+                //     text-decoration: underline;
 
-                    &::before {
-                        content: " ";
-                        display: inline-block;
-                        margin-right: 0.5rem;
-                        background-color: black;
-                        height: 1.5rem;
-                        width: 1.5rem;
-                        padding: 0 0 0 0;
-                    }
-                }
+                //     &::before {
+                //         content: " ";
+                //         display: inline-block;
+                //         margin-right: 0.5rem;
+                //         background-color: black;
+                //         height: 1.5rem;
+                //         width: 1.5rem;
+                //         padding: 0 0 0 0;
+                //     }
+                // }
             }
         }
 
@@ -1110,62 +1169,7 @@ main {
 }
 
 footer {
-    .newsletter {
-        display: flex;
 
-        .newsletter-info {
-            width: 50%;
-            padding: 0 0 0 15%;
-
-            h3 {
-                font-size: 2.4rem;
-            }
-
-            p {
-                font-size: 1.4rem;
-                color: $gray;
-            }
-        }
-
-        form {
-            margin: 3rem 10rem;
-            width: 50%;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-
-            input {
-                outline: none;
-                border: 1px $acentOne solid;
-                background-color: transparent;
-                @include font(500);
-                font-size: 1.4rem;
-                width: 25rem;
-                margin: 0.5rem 0;
-                padding: 1rem 1rem;
-            }
-
-            button {
-                @include font(500);
-                font-size: 1.6rem;
-                border: 0.1rem $acentOne solid;
-                background-color: transparent;
-                outline: 0;
-                padding: 1rem;
-                // border-radius: 0.5rem;
-                color: $acentOne;
-                width: 27rem;
-                cursor: pointer;
-                transition: 300ms ease-in-out;
-                margin: 1rem 0 0 0;
-
-                &:hover {
-                    background-color: $acentOne;
-                    color: white;
-                }
-            }
-        }
-    }
 
     .footer-links {
         display: flex;
