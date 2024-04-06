@@ -1,12 +1,13 @@
 {
-    "products": [
+    "products":[
         {
             "S.N": "1",
             "ProductCode": "CH-001",
             "ProductName": "Executive Office Chair",
             "Description": "Ergonomic chair with adjustable features for comfort.",
             "Price": "450",
-            "Discount": "50",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "ComfortMax",
             "Category": "Chair",
             "Height": "110",
@@ -17,8 +18,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/c9918def-b7af-49df-8549-727240e9e315.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/a862d059-e179-421c-8f55-b5a14dccd0c5.jpg;maxHeight=2000;maxWidth=2000",
             "Image4": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4e1389f0-d829-4508-9dd5-a0901a090de3.jpg;maxHeight=2000;maxWidth=2000",
-            "Sold": "66",
-            "Updated": "20/12/2024"
+            "Sold": "72",
+            "Updated": "12/02/2024"
         },
         {
             "S.N": "2",
@@ -26,7 +27,8 @@
             "ProductName": "Gaming Chair",
             "Description": "High-back chair with lumbar support and headrest for long gaming sessions.",
             "Price": "380",
-            "Discount": "20",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "ThroneTech",
             "Category": "Chair",
             "Height": "125",
@@ -37,8 +39,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6513/6513560cv15d.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6513/6513560cv14d.jpg;maxHeight=2000;maxWidth=2000",
             "Image4": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6513/6513560cv16d.jpg;maxHeight=2000;maxWidth=2000",
-            "Sold": "62",
-            "Updated": "26/12/2024"
+            "Sold": "6",
+            "Updated": "17/09/2024"
         },
         {
             "S.N": "3",
@@ -46,7 +48,8 @@
             "ProductName": "Dining Chair (Set of 4)",
             "Description": "Modern and stylish chairs with a comfortable cushioned seat.",
             "Price": "220",
-            "Discount": "15 (per chair)",
+            "Sale": "20",
+            "SaleAmount": "44",
             "Brand": "DecoDesign",
             "Category": "Chair",
             "Height": "85",
@@ -57,8 +60,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6407/6407711_rd.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "",
             "Image4": "",
-            "Sold": "42",
-            "Updated": "01/03/2024"
+            "Sold": "25",
+            "Updated": "22/06/2024"
         },
         {
             "S.N": "4",
@@ -66,7 +69,8 @@
             "ProductName": "Wingback Armchair",
             "Description": "Elegant armchair with plush cushioning and high back for ultimate comfort.",
             "Price": "800",
-            "Discount": "60",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "Classic Comfort",
             "Category": "Armchair",
             "Height": "100",
@@ -77,8 +81,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6392/6392184cv13a.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "",
             "Image4": "",
-            "Sold": "72",
-            "Updated": "01/03/2024"
+            "Sold": "52",
+            "Updated": "26/01/2024"
         },
         {
             "S.N": "5",
@@ -86,7 +90,8 @@
             "ProductName": "Mid-Century Modern Armchair",
             "Description": "Stylish armchair with a sleek design and tapered legs.",
             "Price": "650",
-            "Discount": "40",
+            "Sale": "5",
+            "SaleAmount": "32.5",
             "Brand": "Retro Designs",
             "Category": "Armchair",
             "Height": "75",
@@ -97,8 +102,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6526/6526977_rd.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6526/6526977ld.jpg;maxHeight=2000;maxWidth=2000",
             "Image4": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6526/6526977cv13d.jpg;maxHeight=2000;maxWidth=2000",
-            "Sold": "11",
-            "Updated": "22/04/2024"
+            "Sold": "21",
+            "Updated": "13/08/2024"
         },
         {
             "S.N": "6",
@@ -106,7 +111,8 @@
             "ProductName": "Reclining Armchair",
             "Description": "Comfortable armchair with a reclining mechanism for ultimate relaxation.",
             "Price": "720",
-            "Discount": "0",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "RelaxZone",
             "Category": "Armchair",
             "Height": "100",
@@ -117,8 +123,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6479/6479570cv15d.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6479/6479570cv13d.jpg;maxHeight=2000;maxWidth=2000",
             "Image4": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6479/6479570cv17d.jpg;maxHeight=2000;maxWidth=2000",
-            "Sold": "69",
-            "Updated": "30/04/2024"
+            "Sold": "19",
+            "Updated": "28/09/2024"
         },
         {
             "S.N": "7",
@@ -126,7 +132,8 @@
             "ProductName": "Swivel Glider Armchair",
             "Description": "Comfortable armchair with a swivel base and gliding motion for smooth rocking.",
             "Price": "500",
-            "Discount": "25",
+            "Sale": "25",
+            "SaleAmount": "125",
             "Brand": "CozyHome",
             "Category": "Armchair",
             "Height": "95",
@@ -137,28 +144,29 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6546/6546315_rd.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6546/6546315ld.jpg;maxHeight=2000;maxWidth=2000",
             "Image4": "",
-            "Sold": "85",
-            "Updated": "04/08/2024"
+            "Sold": "52",
+            "Updated": "05/01/2024"
         },
         {
             "S.N": "8",
             "ProductCode": "SOFA-001",
             "ProductName": "Cozy Corner Sofa",
-            "Description": "\"Plush sofa with comfortable seating for 3",
-            "Price": "perfect for relaxing evenings.\"",
-            "Discount": "1200",
-            "Brand": "100",
-            "Category": "ComfortZone",
-            "Height": "Sofa",
-            "Length": "200",
-            "Breadth": "150",
-            "Quantity": "80",
-            "Image1": "5",
-            "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6531/6531863_sd.jpg;maxHeight=2000;maxWidth=2000",
-            "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6531/6531863ld.jpg;maxHeight=2000;maxWidth=2000",
-            "Image4": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6531/6531863cv1d.jpg;maxHeight=2000;maxWidth=2000",
-            "Sold": "",
-            "Updated": "59"
+            "Description": "Plush sofa with comfortable seating for 3 perfect for relaxing evenings.",
+            "Price": "1200",
+            "Sale": "10",
+            "SaleAmount": "120",
+            "Brand": "ComfortZone",
+            "Category": "Sofa",
+            "Height": "200",
+            "Length": "150",
+            "Breadth": "80",
+            "Quantity": "5",
+            "Image1": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6531/6531863_sd.jpg;maxHeight=2000;maxWidth=2000",
+            "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6531/6531863ld.jpg;maxHeight=2000;maxWidth=2000",
+            "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6531/6531863cv1d.jpg;maxHeight=2000;maxWidth=2000",
+            "Image4": "",
+            "Sold": "63",
+            "Updated": "30/06/2024"
         },
         {
             "S.N": "9",
@@ -166,7 +174,8 @@
             "ProductName": "Modern Sectional Sofa (L-Shaped)",
             "Description": "Stylish sectional sofa with chaise lounge for ultimate comfort and flexibility.",
             "Price": "1500",
-            "Discount": "75",
+            "Sale": "15",
+            "SaleAmount": "225",
             "Brand": "Modern Designs",
             "Category": "Sofa",
             "Height": "250 (total length)",
@@ -177,8 +186,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6392/6392244cv14d.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6392/6392244cv13d.jpg;maxHeight=2000;maxWidth=2000",
             "Image4": "",
-            "Sold": "16",
-            "Updated": "24/10/2024"
+            "Sold": "0",
+            "Updated": "23/09/2024"
         },
         {
             "S.N": "10",
@@ -186,7 +195,8 @@
             "ProductName": "Futon Sofa Bed",
             "Description": "Versatile piece that transforms from a sofa to a comfortable bed.",
             "Price": "800",
-            "Discount": "40",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "SpaceSave",
             "Category": "Sofa",
             "Height": "200",
@@ -197,8 +207,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6539/6539311cv17d.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6539/6539311cv15d.jpg;maxHeight=2000;maxWidth=2000",
             "Image4": "",
-            "Sold": "77",
-            "Updated": "04/12/2024"
+            "Sold": "83",
+            "Updated": "06/11/2024"
         },
         {
             "S.N": "11",
@@ -206,7 +216,8 @@
             "ProductName": "Mid-Century Modern Sofa",
             "Description": "Sleek and stylish sofa with tapered legs and a timeless design.",
             "Price": "1000",
-            "Discount": "50",
+            "Sale": "30",
+            "SaleAmount": "300",
             "Brand": "Retro Living",
             "Category": "Sofa",
             "Height": "180",
@@ -217,8 +228,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6531/6531842ld.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6531/6531842cv1d.jpg;maxHeight=2000;maxWidth=2000",
             "Image4": "",
-            "Sold": "74",
-            "Updated": "08/02/2024"
+            "Sold": "36",
+            "Updated": "06/07/2024"
         },
         {
             "S.N": "12",
@@ -226,7 +237,8 @@
             "ProductName": "Leather Sofa (3-Seater)",
             "Description": "Luxurious sofa with genuine leather upholstery for a sophisticated look.",
             "Price": "1800",
-            "Discount": "0",
+            "Sale": "20",
+            "SaleAmount": "360",
             "Brand": "Executive Seating",
             "Category": "Sofa",
             "Height": "220",
@@ -237,8 +249,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6497/6497578cv1d.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "",
             "Image4": "",
-            "Sold": "31",
-            "Updated": "20/12/2024"
+            "Sold": "49",
+            "Updated": "04/09/2024"
         },
         {
             "S.N": "13",
@@ -246,7 +258,8 @@
             "ProductName": "Minimalist Table Lamp",
             "Description": "Sleek and stylish table lamp with a modern design.",
             "Price": "200",
-            "Discount": "15",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "Urban Living",
             "Category": "Lamp",
             "Height": "180",
@@ -257,8 +270,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6431/6431786cv12d.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6431/6431786cv14d.jpg;maxHeight=2000;maxWidth=2000",
             "Image4": "",
-            "Sold": "29",
-            "Updated": "18/01/2024"
+            "Sold": "82",
+            "Updated": "24/12/2024"
         },
         {
             "S.N": "14",
@@ -266,7 +279,8 @@
             "ProductName": "Floor Lamp with Adjustable Arm",
             "Description": "Functional floor lamp with an adjustable arm for directing light.",
             "Price": "350",
-            "Discount": "20",
+            "Sale": "35",
+            "SaleAmount": "122.5",
             "Brand": "LightZone",
             "Category": "Lamp",
             "Height": "150 (adjustable)",
@@ -277,8 +291,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6411/6411725cv11d.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6411/6411725cv12d.jpg;maxHeight=2000;maxWidth=2000",
             "Image4": "",
-            "Sold": "72",
-            "Updated": "11/03/2024"
+            "Sold": "63",
+            "Updated": "19/03/2024"
         },
         {
             "S.N": "15",
@@ -286,7 +300,8 @@
             "ProductName": "Glass Pendant Lamp",
             "Description": "Modern pendant lamp with a unique glass shade for a decorative touch.",
             "Price": "400",
-            "Discount": "30",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "Modern Designs",
             "Category": "Lamp",
             "Height": "30 (adjustable)",
@@ -297,8 +312,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6490/6490614_rd.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "",
             "Image4": "",
-            "Sold": "40",
-            "Updated": "14/08/2024"
+            "Sold": "37",
+            "Updated": "22/08/2024"
         },
         {
             "S.N": "16",
@@ -306,7 +321,8 @@
             "ProductName": "Platform Bed Frame (Queen)",
             "Description": "Modern and stylish platform bed frame with a sleek design.",
             "Price": "300",
-            "Discount": "20",
+            "Sale": "45",
+            "SaleAmount": "135",
             "Brand": "Modern Designs",
             "Category": "Bedroom",
             "Height": "40",
@@ -317,8 +333,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6514/6514788cv12d.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "",
             "Image4": "",
-            "Sold": "1",
-            "Updated": "01/08/2024"
+            "Sold": "57",
+            "Updated": "03/05/2024"
         },
         {
             "S.N": "17",
@@ -326,7 +342,8 @@
             "ProductName": "Memory Foam Mattress (Queen Size)",
             "Description": "Comfortable and supportive memory foam mattress for a restful night's sleep.",
             "Price": "500",
-            "Discount": "0",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "SleepTech",
             "Category": "Bedroom",
             "Height": "30",
@@ -337,8 +354,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6561/6561115_rd.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "",
             "Image4": "",
-            "Sold": "19",
-            "Updated": "15/09/2024"
+            "Sold": "8",
+            "Updated": "21/01/2024"
         },
         {
             "S.N": "18",
@@ -346,7 +363,8 @@
             "ProductName": "Down Comforter (Queen Size)",
             "Description": "Light and fluffy down comforter for added warmth and comfort.",
             "Price": "150",
-            "Discount": "10",
+            "Sale": "10",
+            "SaleAmount": "15",
             "Brand": "SnuggleZone",
             "Category": "Bedroom",
             "Height": "25",
@@ -357,8 +375,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6562/6562100ld.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "",
             "Image4": "",
-            "Sold": "49",
-            "Updated": "14/04/2024"
+            "Sold": "1",
+            "Updated": "28/04/2024"
         },
         {
             "S.N": "19",
@@ -366,7 +384,8 @@
             "ProductName": "Nightstand",
             "Description": "Functional nightstand with drawers and a shelf for storage of bedside essentials.",
             "Price": "200",
-            "Discount": "15",
+            "Sale": "50",
+            "SaleAmount": "100",
             "Brand": "CozyHome",
             "Category": "Bedroom",
             "Height": "60",
@@ -377,16 +396,17 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6557/6557883cv34d.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6557/6557883cv18d.jpg;maxHeight=2000;maxWidth=2000",
             "Image4": "",
-            "Sold": "95",
-            "Updated": "21/07/2024"
+            "Sold": "58",
+            "Updated": "16/12/2024"
         },
         {
             "S.N": "20",
             "ProductCode": "TEX-002",
             "ProductName": "Decorative Throw Pillow (Set of 2)",
             "Description": "Stylish throw pillows with various patterns and colors to add a touch of personality to your decor.",
-            "Price": "30 (per set)",
-            "Discount": "5",
+            "Price": "30",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "Urban Living",
             "Category": "Textile",
             "Height": "45",
@@ -397,8 +417,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6544/6544360cv11d.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "",
             "Image4": "",
-            "Sold": "75",
-            "Updated": "03/02/2024"
+            "Sold": "84",
+            "Updated": "21/12/2024"
         },
         {
             "S.N": "21",
@@ -406,7 +426,8 @@
             "ProductName": "Luxury Silk Bed Sheet Set",
             "Description": "Luxurious and smooth silk bed sheet set for a comfortable and elegant sleep experience.",
             "Price": "250",
-            "Discount": "0",
+            "Sale": "50",
+            "SaleAmount": "125",
             "Brand": "Royal Silk",
             "Category": "Textile",
             "Height": "-",
@@ -417,8 +438,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6465/6465560ld.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "",
             "Image4": "",
-            "Sold": "34",
-            "Updated": "24/10/2024"
+            "Sold": "13",
+            "Updated": "23/10/2024"
         },
         {
             "S.N": "22",
@@ -426,7 +447,8 @@
             "ProductName": "Full-Length Mirror",
             "Description": "Sleek and modern full-length mirror for checking your outfit from head to toe.",
             "Price": "180",
-            "Discount": "50",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "Modern Designs",
             "Category": "Mirror",
             "Height": "180",
@@ -437,8 +459,8 @@
             "Image2": "https://www.ikea.com/us/en/images/products/ikornnes-floor-mirror-ash__0746955_ph157405_s5.jpg?f=xxl",
             "Image3": "",
             "Image4": "",
-            "Sold": "76",
-            "Updated": "05/03/2024"
+            "Sold": "40",
+            "Updated": "14/03/2024"
         },
         {
             "S.N": "23",
@@ -446,7 +468,8 @@
             "ProductName": "Decorative Round Mirror",
             "Description": "Stylish round mirror with a decorative frame for a touch of elegance.",
             "Price": "120",
-            "Discount": "20",
+            "Sale": "35",
+            "SaleAmount": "42",
             "Brand": "Classic Collection",
             "Category": "Mirror",
             "Height": "80 (diameter)",
@@ -457,8 +480,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6516/6516624cv12d.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "",
             "Image4": "",
-            "Sold": "82",
-            "Updated": "16/07/2024"
+            "Sold": "31",
+            "Updated": "24/06/2024"
         },
         {
             "S.N": "24",
@@ -466,7 +489,8 @@
             "ProductName": "Bathroom Mirror with Cabinet",
             "Description": "Functional mirror with a built-in cabinet for storage of bathroom essentials.",
             "Price": "80",
-            "Discount": "30",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "CozyHome",
             "Category": "Mirror",
             "Height": "60",
@@ -477,8 +501,8 @@
             "Image2": "https://www.ikea.com/us/en/images/products/storjorm-mirror-cabinet-w-2-doors-light-white__0863687_pe555097_s5.jpg?f=xxl",
             "Image3": "",
             "Image4": "",
-            "Sold": "59",
-            "Updated": "02/11/2024"
+            "Sold": "50",
+            "Updated": "13/05/2024"
         },
         {
             "S.N": "25",
@@ -486,7 +510,8 @@
             "ProductName": "Tilting Vanity Mirror",
             "Description": "Adjustable vanity mirror with a tilting base for perfect makeup application.",
             "Price": "60",
-            "Discount": "15",
+            "Sale": "30",
+            "SaleAmount": "18",
             "Brand": "LightZone",
             "Category": "Mirror",
             "Height": "40",
@@ -497,8 +522,8 @@
             "Image2": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6342/6342382cv14d.jpg;maxHeight=2000;maxWidth=2000",
             "Image3": "",
             "Image4": "",
-            "Sold": "71",
-            "Updated": "01/09/2024"
+            "Sold": "58",
+            "Updated": "10/05/2024"
         },
         {
             "S.N": "26",
@@ -506,7 +531,8 @@
             "ProductName": "Decorative Vase",
             "Description": "Elegant ceramic vase for displaying flowers or as a standalone decorative piece.",
             "Price": "50",
-            "Discount": "10",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "Classic Collection",
             "Category": "Decoration",
             "Height": "30",
@@ -517,16 +543,17 @@
             "Image2": "https://www.ikea.com/us/en/images/products/stilren-vase-black__1257019_pe925531_s5.jpg?f=xxl",
             "Image3": "",
             "Image4": "",
-            "Sold": "61",
-            "Updated": "11/04/2024"
+            "Sold": "9",
+            "Updated": "05/09/2024"
         },
         {
             "S.N": "27",
             "ProductCode": "DECO-002",
             "ProductName": "Decorative Throw Blanket (Set of 2)",
             "Description": "Soft and stylish throw blankets with various patterns and colors to add a touch of comfort and style.",
-            "Price": "40 (per set)",
-            "Discount": "15 (per set)",
+            "Price": "40",
+            "Sale": "20",
+            "SaleAmount": "8",
             "Brand": "CozyHome",
             "Category": "Decoration",
             "Height": "150 x 100",
@@ -537,8 +564,8 @@
             "Image2": "https://www.ikea.com/us/en/images/products/blaskata-cushion-cylinder-shaped-light-gray__1199903_pe904760_s5.jpg?f=xxl",
             "Image3": "",
             "Image4": "",
-            "Sold": "13",
-            "Updated": "05/02/2024"
+            "Sold": "42",
+            "Updated": "26/09/2024"
         },
         {
             "S.N": "28",
@@ -546,7 +573,8 @@
             "ProductName": "Wall Mirror",
             "Description": "Modern and sleek wall mirror to enhance the light and space in your room.",
             "Price": "120",
-            "Discount": "0",
+            "Sale": "0",
+            "SaleAmount": "0",
             "Brand": "Urban Living",
             "Category": "Decoration",
             "Height": "Varies",
@@ -557,8 +585,8 @@
             "Image2": "https://www.ikea.com/us/en/images/products/nissedal-mirror-walnut-effect__1038730_pe839849_s5.jpg?f=xxl",
             "Image3": "",
             "Image4": "",
-            "Sold": "31",
-            "Updated": "20/12/2024"
+            "Sold": "7",
+            "Updated": "19/07/2024"
         }
     ]
 }

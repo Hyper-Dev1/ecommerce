@@ -2,12 +2,19 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios"
 import Maincard from "./Maincard"
+import { useSelector, useDispatch } from "react-redux"
+import {
+  addItemToCart,
+  removeItemFromCart,
+  addItemToWishlist,
+  removeItemFromWishlist,
+} from "../State/slices"
 
 const Productpage = () => {
   const { id } = useParams()
-  const [product, setProduct] = useState([])
-  const [mainImage, setMainImage] = useState()
-  const [value, setValue] = useState(1)
+  const [product, setProduct] = useState({})
+  const [mainImage, setMainImage] = useState("")
+  const [quantity, setQuantity] = useState(1)
 
   useEffect(() => {
     axios
@@ -20,24 +27,48 @@ const Productpage = () => {
         console.error("Error fetching product details:", error)
       })
   }, [id])
-  console.log(product.Image1)
-  const handleImageClick = (newImage) => {
-    setMainImage(newImage)
+
+  const dispatch = useDispatch()
+  const cartItems = useSelector((state) => state.cart.items)
+  const wishlistItems = useSelector((state) => state.wishlist.items)
+
+  const isProductInCart = cartItems.some((item) => item.id === id)
+  const isProductInWishlist = wishlistItems.some((item) => item.id === id)
+
+  const handleAddToCart = () => {
+    dispatch(addItemToCart({ ...product, quantity }))
   }
+
+  const handleAddToWishlist = () => {
+    dispatch(addItemToWishlist(product))
+  }
+
+  const handleRemoveFromCart = () => {
+    dispatch(removeItemFromCart(id))
+  }
+
+  const handleRemoveFromWishlist = () => {
+    dispatch(removeItemFromWishlist(id))
+  }
+
   const handleIncrement = () => {
-    setValue((prevQuantity) => prevQuantity + 1)
+    setQuantity((prevQuantity) => prevQuantity + 1)
   }
 
   const handleDecrement = () => {
-    if (value > 1) {
-      setValue((prevQuantity) => prevQuantity - 1)
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1)
     }
   }
+
   const handleChange = (event) => {
     const newQuantity = parseInt(event.target.value)
     if (!isNaN(newQuantity) && newQuantity >= 1) {
-      setValue(newQuantity)
+      setQuantity(newQuantity)
     }
+  }
+  const handleImageClick = (newImage) => {
+    setMainImage(newImage)
   }
   return (
     <>
@@ -84,8 +115,8 @@ const Productpage = () => {
           <p>{product.Category}</p>
           <h2>${product.Price}</h2>
           <p>
-            H - <span>{product.Height}</span>cm W -{" "}
-            <span>{product.Length}</span>cm B - <span>{product.Breadth}</span>cm
+            H - <span>{product.Height}</span>cm W -<span>{product.Length}</span>
+            cm B - <span>{product.Breadth}</span>cm
             <br />
             <br />
             {product.Description}
@@ -95,14 +126,24 @@ const Productpage = () => {
             <button onClick={handleIncrement}>
               <img src="/Assets/add.svg" alt="" />
             </button>
-            <input type="number" value={value} onChange={handleChange} />
+            <input type="number" value={quantity} onChange={handleChange} />
             <button onClick={handleDecrement}>
               <img src="/Assets/minus.svg" alt="" />
             </button>
           </div>
           <div className="product-btn">
-            <button>Add to Cart</button>
-            <button>Add to Wishlist</button>
+            {isProductInCart ? (
+              <button onClick={handleRemoveFromCart}>Remove from Cart</button>
+            ) : (
+              <button onClick={handleAddToCart}>Add to cart</button>
+            )}
+            {isProductInWishlist ? (
+              <button onClick={handleRemoveFromWishlist}>
+                Remove from Wishlist
+              </button>
+            ) : (
+              <button onClick={handleAddToWishlist}>Add to Wishlist</button>
+            )}
           </div>
         </div>
       </div>

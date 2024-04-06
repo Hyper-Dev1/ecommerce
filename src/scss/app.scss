@@ -25,9 +25,12 @@
             .card-img {
                 text-align: center;
                 margin: 0.5rem 0 0 0;
+                background-size: cover;
 
                 img {
                     width: 22rem;
+                    height: 20rem;
+                    object-fit: contain;
                     mix-blend-mode: multiply;
                 }
             }
@@ -51,6 +54,31 @@
             &:hover {
                 background-color: #C7C7D1;
             }
+        }
+    }
+}
+
+@mixin button($width) {
+    button {
+        font-size: 1.6rem;
+        border: 0.1rem $acentTwo solid;
+        outline: 0;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        width: $width;
+        cursor: pointer;
+        transition: 300ms ease-in-out;
+        margin: 3rem 0 0 0;
+        background-color: $acentTwo;
+        @include font(600);
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        &:hover {
+            font-size: 1.8rem;
         }
     }
 }
@@ -120,6 +148,27 @@ nav {
     }
 
     .nav-buttons {
+        display: flex;
+        justify-content: end;
+        width: 15%;
+
+        .btn-badge {
+            position: relative;
+
+            .badge-num {
+                position: absolute;
+                top: 0;
+                right: 0.3rem;
+                border-radius: 50%;
+                height: 1.5rem;
+                width: 1.5rem;
+                background-color: red;
+                font-size: 1.2rem;
+                color: white;
+            }
+
+        }
+
         button {
             @include font(500);
             background-color: transparent;
@@ -455,12 +504,13 @@ main {
 
                 .card-img {
                     text-align: center;
+                    background-size: cover;
 
                     img {
-                        width: 20rem;
-                        // aspect-ratio: 1/2;
-                        mix-blend-mode: multiply;
+                        width: 22rem;
+                        height: 20rem;
                         object-fit: contain;
+                        mix-blend-mode: multiply;
                     }
                 }
 
@@ -668,31 +718,44 @@ main {
         outline: 0;
     }
 
-    form {
+
+    .form-section {
         margin: 7rem 0 0 0;
         text-align: center;
+        margin: 0 10rem;
 
-        .form-section {
-            margin: 0 10rem;
-
-            input {
-                @include font(500);
-                font-size: 1.5rem;
-                width: 30rem;
-                height: 4rem;
-                border: 0.1rem black solid;
-                outline: 0;
-                padding: 0 2rem;
-                margin: 1rem 2rem;
-            }
+        input {
+            @include font(500);
+            font-size: 1.5rem;
+            width: 30rem;
+            height: 4rem;
+            border: 0.1rem black solid;
+            outline: 0;
+            padding: 0 2rem;
+            margin: 1rem 2rem;
         }
+    }
 
-        .btn-section {
-            padding: 4rem 10rem;
-            display: flex;
-            justify-content: space-between;
+    .btn-section {
+        padding: 4rem 10rem;
+        display: flex;
+        justify-content: space-between;
 
+        button {
+            padding: 1rem;
+            outline: 0;
+            @include font(600);
+            font-size: 1.6rem;
+            margin: 0 2rem;
+            width: 20rem;
+            cursor: pointer;
+            transition: 300ms ease-in-out;
+            background-color: $acentTwo;
+            border: 0.1rem $acentTwo solid;
 
+            &:hover {
+                background-color: #e4c465;
+            }
         }
     }
 }
@@ -751,20 +814,29 @@ main {
 
             .cart-item-heading {
                 display: flex;
+                width: 50%;
 
                 .cart-item-img {
 
                     img {
+                        mix-blend-mode: multiply;
+                        object-fit: contain;
                         height: 12rem;
                     }
                 }
 
                 .cart-item-desc {
-                    margin: 2rem 0 0 1rem;
+                    margin: 2rem 0 0 3rem;
 
                     h2 {
                         font-size: 2rem;
                         margin: 0.5rem 0;
+                        width: 45rem;
+                        white-space: nowrap;
+                        /* Prevent text from wrapping */
+                        overflow: hidden;
+                        /* Hide any content that overflows */
+                        text-overflow: ellipsis;
                     }
 
                     p {
@@ -780,6 +852,7 @@ main {
                 margin: 3rem 0 0 0;
                 // border: 1px black solid;
                 height: 4rem;
+                width: 20rem;
 
                 h2 {
                     font-size: 1.8rem;
@@ -793,6 +866,7 @@ main {
                     border: 0;
                     text-align: center;
                     height: 2.5rem;
+                    cursor: pointer;
 
                     img {
                         height: 2rem;
@@ -827,14 +901,71 @@ main {
         }
 
         .price {
+            width: 20rem;
+            text-align: center;
             font-size: 2.4rem;
             margin: 0 2rem 0 0;
         }
 
         .close {
             position: absolute;
+            right: 0;
+            top: 0;
+
+            button {
+                background-color: transparent;
+                outline: 0;
+                border: 0;
+                cursor: pointer;
+
+                img {
+                    width: 3rem;
+                }
+            }
         }
 
+
+    }
+
+    .checkout {
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            button {
+                padding: 1rem;
+                outline: 0;
+                @include font(600);
+                font-size: 1.6rem;
+                margin: 0 2rem;
+                width: 20rem;
+                cursor: pointer;
+                transition: 300ms ease-in-out;
+                background-color: $acentTwo;
+                border: 0.1rem $acentTwo solid;
+
+                &:hover {
+                    background-color: #e4c465;
+                }
+            }
+        }
+
+        button {
+            padding: 1rem;
+            outline: 0;
+            @include font(600);
+            font-size: 1.6rem;
+            margin: 0 2rem;
+            width: 20rem;
+            cursor: pointer;
+            transition: 300ms ease-in-out;
+            background-color: $acentTwo;
+            border: 0.1rem $acentTwo solid;
+
+            &:hover {
+                background-color: #e4c465;
+            }
+        }
     }
 }
 
@@ -851,6 +982,7 @@ main {
         h2 {
             font-size: 4rem;
             margin: 0 0.5rem;
+            text-transform: capitalize;
         }
 
         p {
@@ -926,69 +1058,70 @@ main {
             }
         }
 
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+
+            h2 {
+                padding: 0.5rem 0;
+            }
+
+            button {
+                outline: 0;
+                @include font(600);
+                font-size: 1.6rem;
+                width: max-content;
+                padding: 0 2rem;
+                height: 3rem;
+                cursor: pointer;
+                transition: 300ms ease-in-out;
+                background-color: $acentTwo;
+                border: 0.1rem $acentTwo solid;
+
+                &:hover {
+                    background-color: #e4c465;
+                }
+            }
+        }
+
+        .filter-cont {
+            padding: 0 0 0 3rem;
+            margin: 2rem 0 0 0;
+
+            label {
+                font-size: 1.5rem;
+                font-weight: 500;
+                font-weight: 600;
+            }
+
+            span {
+                font-size: 1.4rem;
+            }
+
+            .filter-range {
+                p {
+                    margin: 0.5rem 0;
+                }
+            }
+
+            .filter-select-box {
+                p {
+                    margin: 0.5rem 0;
+                    font-size: 1.5rem;
+                }
+
+                .filter-checkbox {
+                    height: 3rem;
+                }
+            }
+        }
+
         form {
             // width: 19rem;
             // width: 100%;
             margin: 0;
             padding: 0;
 
-            .filter-header {
-                display: flex;
-                justify-content: space-between;
-
-                h2 {
-                    padding: 0.5rem 0;
-                }
-
-                button {
-                    outline: 0;
-                    @include font(600);
-                    font-size: 1.6rem;
-                    width: max-content;
-                    padding: 0 2rem;
-                    height: 3rem;
-                    cursor: pointer;
-                    transition: 300ms ease-in-out;
-                    background-color: $acentTwo;
-                    border: 0.1rem $acentTwo solid;
-
-                    &:hover {
-                        background-color: #e4c465;
-                    }
-                }
-            }
-
-            .filter-cont {
-                padding: 0 0 0 3rem;
-                margin: 2rem 0 0 0;
-
-                label {
-                    font-size: 1.5rem;
-                    font-weight: 500;
-                    font-weight: 600;
-                }
-
-                span {
-                    font-size: 1.4rem;
-                }
-
-                .filter-range {
-                    p {
-                        margin: 0.5rem 0;
-                    }
-                }
-
-                .filter-select-box {
-                    p {
-                        margin: 0.5rem 0;
-                        font-size: 1.5rem;
-                    }
-
-                    .filter-checkbox {
-                        height: 3rem;
-                    }
-                }
-            }
         }
     }
 
@@ -1168,8 +1301,30 @@ main {
     }
 }
 
-footer {
+.blank {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    // border: 1px black solid;
 
+    .blank-cont {
+        height: 40vh;
+    }
+
+    h2 {
+        position: absolute;
+        display: inline;
+        width: 100%;
+        font-size: 3.2rem;
+        top: 25%;
+        text-align: center;
+    }
+}
+
+footer {
+    // position: absolute;
+    // bottom: 0;
+    // width: 90%;
 
     .footer-links {
         display: flex;

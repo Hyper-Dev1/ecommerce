@@ -1,119 +1,69 @@
-
+import { useSelector, useDispatch } from "react-redux"
+import { removeItemFromWishlist } from "../State/slices"
+import Blank from "./Blank"
 const Wishlist = () => {
-    return (
-      <>
-        <div className="breadcrumbs">
-          <p>
-            Shop / <span>Wishlist</span>
-          </p>
-        </div>
-        <div className="cart">
-          <div className="cart-heading">
-            <div className="heading-title">
-              <h1>Your Wishlist </h1>
-              <p>3 Items</p>
-            </div>
-            <p className="cart-total">
-              Total
-              <span> $ 120</span>
-            </p>
-          </div>
-          <div className="cart-items-cont">
-            <div className="cart-item">
-              <div className="cart-item-heading">
-                <div className="cart-item-img">
-                  <img
-                    src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
-                    alt=""
-                  />
-                </div>
-                <div className="cart-item-desc">
-                  <h2>Product Item</h2>
-                  <p>Category</p>
-                </div>
-              </div>
-              <div className="cart-qty">
-                <h2>QTY</h2>
-                <button>
-                  <img src="./Assets/add.svg" alt="" />
-                </button>
-                <input type="number" name="qty" id="" value={1} />
-                <button>
-                  <img src="./Assets/minus.svg" alt="" />
-                </button>
-              </div>
-              <div className="price">
-                <p>$ 40</p>
-              </div>
-              <div className="close">
-                <img src="/" alt="" />
-              </div>
-            </div>
-            <div className="cart-item">
-              <div className="cart-item-heading">
-                <div className="cart-item-img">
-                  <img
-                    src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
-                    alt=""
-                  />
-                </div>
-                <div className="cart-item-desc">
-                  <h2>Product Item</h2>
-                  <p>Category</p>
-                </div>
-              </div>
-              <div className="cart-qty">
-                <h2>QTY</h2>
-                <button>
-                  <img src="./Assets/add.svg" alt="" />
-                </button>
-                <input type="number" name="qty" id="" value={1} />
-                <button>
-                  <img src="./Assets/minus.svg" alt="" />
-                </button>
-              </div>
-              <div className="price">
-                <p>$ 40</p>
-              </div>
-              <div className="close">
-                <img src="/" alt="" />
-              </div>
-            </div>
-            <div className="cart-item">
-              <div className="cart-item-heading">
-                <div className="cart-item-img">
-                  <img
-                    src="https://pluspng.com/img-png/furniture-png-chair-png-transparent-image-1096.png"
-                    alt=""
-                  />
-                </div>
-                <div className="cart-item-desc">
-                  <h2>Product Item</h2>
-                  <p>Category</p>
-                </div>
-              </div>
-              <div className="cart-qty">
-                <h2>QTY</h2>
-                <button>
-                  <img src="./Assets/add.svg" alt="" />
-                </button>
-                <input type="number" name="qty" id="" value={1} />
-                <button>
-                  <img src="./Assets/minus.svg" alt="" />
-                </button>
-              </div>
-              <div className="price">
-                <p>$ 40</p>
-              </div>
-              <div className="close">
-                <img src="/" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </>
-    )
+  const wishlistItems = useSelector((state) => state.wishlist.items)
+  const dispatch = useDispatch()
+
+  const removeItem = (itemId) => {
+    return () => {
+      dispatch(removeItemFromWishlist(itemId))
+    }
   }
-  
-  export default Wishlist
-  
+
+  return (
+    <>
+      <div className="breadcrumbs">
+        <p>
+          Shop / <span>Wishlist</span>
+        </p>
+      </div>
+      <div className="cart">
+        <div className="cart-heading">
+          <div className="heading-title">
+            <h1>Your Wishlist </h1>
+            <p> {wishlistItems.length} Items</p>
+          </div>
+          {/* <p className="cart-total">
+            Total
+            <span> $ {totalPrice.toFixed(2)}</span>
+          </p> */}
+        </div>
+        <div>
+          {!wishlistItems || wishlistItems.length === 0 ? (
+            <div>
+              <Blank message={"Your Wishlist is Empty"} />
+            </div>
+          ) : (
+            <div className="cart-items-cont">
+              {/* Iterate over cart items and display them */}
+              {wishlistItems.map((item) => (
+                <div className="cart-item" key={item.id}>
+                  <div className="cart-item-heading">
+                    <div className="cart-item-img">
+                      <img src={item.Image1} alt={item.ProductName} />
+                    </div>
+                    <div className="cart-item-desc">
+                      <h2>{item.ProductName}</h2>
+                      <p>{item.Category}</p>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <p>$ {item.Price}</p>
+                  </div>
+                  <div className="close">
+                    <button onClick={removeItem(item.id)}>
+                      <img src="/Assets/close-circle.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default Wishlist
