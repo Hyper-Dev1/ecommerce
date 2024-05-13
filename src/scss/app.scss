@@ -99,13 +99,13 @@ $gray:#68696b;
 
 body {
     margin: 1rem 3rem;
-
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     user-select: none;
+    align-items: center;
 
     .nav-logo {
         @include font(500);
@@ -287,8 +287,6 @@ nav {
         }
     }
 }
-
-
 
 main {
     .cta {
@@ -1201,7 +1199,7 @@ main {
     }
 }
 
-.search {
+.searchBar {
     position: relative;
     margin: 0 0 0 25%;
     // text-align: center;
@@ -1221,7 +1219,7 @@ main {
         border-radius: 2rem;
         padding: 0 0.5rem 0 0.9rem;
 
-        form {
+        .search-box {
             height: 3rem;
             display: flex;
             justify-content: space-between;
@@ -1270,21 +1268,24 @@ main {
         position: absolute;
         margin: 0.5rem 0 0 0;
         border: 1px $gray solid;
-        border-radius: 2rem;
+        border-radius: 1.2rem;
         width: 61rem;
         background-color: #E9E9ED;
+        padding: 1rem 0;
+        z-index: 2;
         // display: none;
 
         .suggestion-item {
             display: flex;
-            margin: 1rem 0.5rem 0.5rem 0.5rem;
+            // margin: 1rem 0.5rem 0.5rem 0.5rem;
             padding: 0.5rem 0.5rem 0 0.9rem;
-            border-radius: 1rem;
             height: 3rem;
+            align-items: center;
+            cursor: pointer;
 
             p {
                 padding: 0.20rem 1rem;
-                font-size: 1.5rem;
+                font-size: 1.6rem;
                 margin: 0;
                 font-weight: 600;
             }

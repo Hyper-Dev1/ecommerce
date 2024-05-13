@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom"
+import Blank from "./Blank"
 
 const Productgrid = ({ products }) => {
   if (!products || products.length === 0) {
-    return <div>Loading...</div> // Or any loading indicator you prefer
+    return (
+      <>
+        <h1>No Product Avaibale</h1>
+      </>
+    ) // Or any loading indicator you prefer
   }
   return (
     <div className="product-grid-view">

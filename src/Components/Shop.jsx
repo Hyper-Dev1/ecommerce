@@ -2,63 +2,89 @@ import { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import axios from "axios"
 import Productgrid from "./Productgrid"
+// import Search from "./Search"
+import Searchbar from "./Searchbar"
 
 const Shop = ({ catname: propCatname }) => {
   const { catname: urlCatname } = useParams()
   const catname = propCatname || urlCatname
 
   const [products, setProducts] = useState([])
-  const [categoryName, setCategoryName] = useState("") // Add state for category name
+  const [categoryName, setCategoryName] = useState("")
+  const [searchValue, setSearchValue] = useState("") // Step 1: Add state for search value
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://192.168.1.7:3001/products/")
+        const response = await axios.get("https://www.jsonblob.com/api/jsonblob/1238790362385735680")
         let filteredProducts = response.data
+        console.log(catname)
 
-        if (catname === undefined) {
-          // Check if catname is undefined
-          console.log("Printing all products") // Log that all products will be printed
-          setProducts(filteredProducts)
-          return // Exit early without applying any filters
-        }
-
-        if (catname === "trending") {
-          filteredProducts = filteredProducts.sort((a, b) => b.Sold - a.Sold)
-        } else if (catname === "latest") {
-          filteredProducts = filteredProducts.sort(
-            (a, b) => new Date(b.Updated) - new Date(a.Updated)
-          )
-        } else if (catname === "sale") {
-          filteredProducts = filteredProducts.filter(
-            (product) => product.Sale > 0
-          )
-        } else if (catname !== "category") {
-          console.log(`Filtering products for category: ${catname}`) // Log the category being filtered
+        // Check if catname is undefined or matches predefined categories
+        if (
+          !catname ||
+          ["trending", "latest", "sale", "category"].includes(catname)
+        ) {
+          // Apply category-based filters
+          if (catname === "trending") {
+            filteredProducts = filteredProducts.sort((a, b) => b.Sold - a.Sold)
+            console.log("catnamesold")
+          } else if (catname === "latest") {
+            filteredProducts = filteredProducts.sort(
+              (a, b) => new Date(b.Updated) - new Date(a.Updated)
+            )
+            console.log("catnamelatest")
+          } else if (catname === "sale") {
+            filteredProducts = filteredProducts.filter(
+              (product) => product.Sale > 0
+            )
+            console.log("catnamesle")
+          } else if (catname && catname !== "category") {
+            filteredProducts = filteredProducts.filter(
+              (product) => product.Category === catname
+            )
+            console.log("catname2")
+          }
+        } else {
           filteredProducts = filteredProducts.filter(
             (product) => product.Category === catname
           )
+          console.log("catname")
         }
-        setProducts(filteredProducts)
 
-        setCategoryName(catname) // Set the category name
+        // Apply search filter if searchValue is available
+        if (searchValue) {
+          filteredProducts = filteredProducts.filter((product) =>
+            product.ProductName.toLowerCase().includes(
+              searchValue.toLowerCase()
+            )
+          )
+          console.log(searchValue);
+        }
+
+        setProducts(filteredProducts)
+        setCategoryName(catname)
       } catch (error) {
         console.error("Error fetching product details:", error)
       }
     }
 
     fetchData()
-  }, [catname])
+  }, [catname, searchValue]) // Step 4: Trigger fetchData when catname or searchValue changes
 
+  // Step 2: Pass a function to handle search value changes
+  const handleSearch = (value) => {
+    setSearchValue(value)
+  }
   return (
     <>
       <div className="cat-hero">
         <div className="cat-hero-desc">
-          {catname ? <h2>{catname}</h2> : <h2>Product Catalog</h2>}
+          {categoryName ? <h2>{categoryName}</h2> : <h2>All Products</h2>}
           <div className="breadcrumbs">
-            {catname ? (
+            {categoryName ? (
               <p>
-                Shop / <span>Category</span>
+                Shop / Category / <span>{categoryName}</span>
               </p>
             ) : (
               <p>
@@ -75,7 +101,7 @@ const Shop = ({ catname: propCatname }) => {
           <img src="\Assets\img.png" alt="" />
         </div>
       </div>
-      {/* <Search /> */}
+      <Searchbar onSearch={handleSearch} />
       <div className="product-cont">
         <div className="product-filter">
           <div className="category">
@@ -134,6 +160,9 @@ const Shop = ({ catname: propCatname }) => {
             <Productgrid products={products} />
           </div>
         </div>
+      </div>
+      <div style= {{display:'none'}}>
+        <h1>fahsdkf</h1>
       </div>
     </>
   )

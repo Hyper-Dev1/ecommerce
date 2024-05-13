@@ -8,17 +8,25 @@ import Wishlist from "./Components/Wishlist"
 import Search from "./Components/Search"
 import { useSelector } from "react-redux"
 import Blank from "./Components/Blank"
+import { useState } from "react"
 
 function App() {
+  const [showNavigation, setNavigation] = useState(false)
+
   const cartItems = useSelector((state) => state.cart.items)
   const wishlistItems = useSelector((state) => state.wishlist.items)
 
+  const handleNavigation = () => {
+    showNavigation ? setNavigation(false) : setNavigation(true)
+  }
   return (
     <>
       <Router scrollRestoration="false">
         <nav>
           <div className="nav-logo">
-            <h1>Home Furniture</h1>
+            <h1>
+              <Link to="/">Home Furniture</Link>
+            </h1>
           </div>
           <div className="nav-link">
             <ul>
@@ -36,6 +44,63 @@ function App() {
               </li>
             </ul>
           </div>
+          {showNavigation ? (
+            <div className="nav-link-s" style={{ display: "block" }}>
+              <div className="close-button">
+                <button onClick={handleNavigation} className="">
+                  <img height="32px" src="./Assets/close-circle.svg" alt="" />
+                </button>
+              </div>
+              <ul>
+                <li>
+                  <Link to="/" onClick={() => setNavigation(false)}>
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/shop/products/all"
+                    onClick={() => setNavigation(false)}
+                  >
+                    All Products
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/shop/products/trending"
+                    onClick={() => setNavigation(false)}
+                  >
+                    Trending
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/shop/products/latest"
+                    onClick={() => setNavigation(false)}
+                  >
+                    New Arrival
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <div className="nav-link-s" style={{ display: "none" }}>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/shop/products/all">All Products</Link>
+                </li>
+                <li>
+                  <Link to="/shop/products/trending">Trending</Link>
+                </li>
+                <li>
+                  <Link to="/shop/products/latest">New Arrival</Link>
+                </li>
+              </ul>
+            </div>
+          )}
           <div className="nav-buttons">
             <button>
               <Link to="/shop/search">
@@ -50,11 +115,6 @@ function App() {
                 </div>
               </Link>
             </button>
-            {/* <button>
-              <Link to="/">
-                <img src="/Assets/profilec.svg" alt="Profile" />
-              </Link>
-            </button> */}
             <button className="btn-badge">
               <Link to="/shop/wishlist">
                 <img src="/Assets/heart.svg" alt="Wishlist" />
@@ -63,12 +123,18 @@ function App() {
                 </div>
               </Link>
             </button>
+            <button onClick={handleNavigation}>
+              <Link to="/">
+                <img src="/Assets/menu.svg" alt="Profile" />
+              </Link>
+            </button>
           </div>
         </nav>
+
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/shop/cart" element={<Cart />} />
-          {/* <Route path="/shop/search" element={<Search />} /> */}
+          <Route path="/shop/search" element={<Search />} />
           <Route path="/shop/wishlist" element={<Wishlist />} />
           <Route path="/shop/cart/shipping" element={<Shipping />} />
           <Route path="/shop/*" element={<ShopRoutes />} />
@@ -77,10 +143,10 @@ function App() {
             path="/cart/checkout"
             element={<Blank message="Still in Development✨" />}
           />
-          <Route
+          {/* <Route
             path="/shop/search"
             element={<Blank message="Still in Development✨" />}
-          />
+          /> */}
         </Routes>
 
         <footer>

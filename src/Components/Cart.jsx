@@ -78,28 +78,30 @@ const Cart = () => {
                     </div>
                     <div className="cart-qty">
                       <h2>QTY</h2>
-                      <button
-                        onClick={() => handleIncrement(item, item.quantity)}
-                      >
-                        {/* Add button to increase quantity */}
-                        <img src="/Assets/add.svg" alt="" />
-                      </button>
-                      <input
-                        type="number"
-                        name="qty"
-                        id=""
-                        value={item.quantity}
-                        onChange={(e) =>
-                          handleQuantityChange(item.id, e.target.value)
-                        }
-                        // readOnly // Make the input readOnly
-                      />
-                      <button
-                        onClick={() => handleDecrement(item, item.quantity)}
-                      >
-                        {/* Add button to decrease quantity */}
-                        <img src="/Assets/minus.svg" alt="" />
-                      </button>
+                      <div className="qty-btn-group">
+                        <button
+                          onClick={() => handleIncrement(item, item.quantity)}
+                        >
+                          {/* Add button to increase quantity */}
+                          <img src="/Assets/add.svg" alt="" />
+                        </button>
+                        <input
+                          type="number"
+                          name="qty"
+                          id=""
+                          value={item.quantity}
+                          onChange={(e) =>
+                            handleQuantityChange(item.id, e.target.value)
+                          }
+                          // readOnly // Make the input readOnly
+                        />
+                        <button
+                          onClick={() => handleDecrement(item, item.quantity)}
+                        >
+                          {/* Add button to decrease quantity */}
+                          <img src="/Assets/minus.svg" alt="" />
+                        </button>
+                      </div>
                     </div>
                     <div className="price">
                       <p>$ {item.Price}</p>

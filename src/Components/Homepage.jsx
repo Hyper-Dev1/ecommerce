@@ -3,13 +3,12 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import Salecard from "./Salecard"
 
-
 const Homepage = () => {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
     axios
-      .get("http://192.168.1.7:3001/products")
+      .get("https://www.jsonblob.com/api/jsonblob/1238790362385735680")
       .then((response) => {
         setProducts(response.data)
       })
@@ -22,6 +21,9 @@ const Homepage = () => {
     <main>
       <div className="hero">
         <div className="corousel-item">
+          <div className="hero-img">
+            <img src="\Assets\sofa img.png" alt="" />
+          </div>
           <div className="hero-text">
             <h2>Comfortable Sofa with Great Comfort</h2>
             <p>
@@ -33,9 +35,6 @@ const Homepage = () => {
             <button className="cta">
               <Link to="/shop/category/sofa">Shop Now</Link>
             </button>
-          </div>
-          <div className="hero-img">
-            <img src="\Assets\sofa img.png" alt="" />
           </div>
         </div>
       </div>
@@ -117,7 +116,7 @@ const Homepage = () => {
           </Link>
         </div>
       </div>
-        <hr />
+      <hr />
       <div className="newsletter">
         <div className="newsletter-info">
           <h3>Newsletter</h3>

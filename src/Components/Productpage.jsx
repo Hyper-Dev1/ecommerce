@@ -18,10 +18,11 @@ const Productpage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/products/${id}`)
+      .get(`https://www.jsonblob.com/api/jsonblob/1238790362385735680`)
       .then((response) => {
-        setProduct(response.data)
-        setMainImage(response.data.Image1)
+        const filterProduct = response.data.filter((item) => id === item.id)
+        setProduct(filterProduct[0])
+        setMainImage(filterProduct[0].Image1)
       })
       .catch((error) => {
         console.error("Error fetching product details:", error)
@@ -70,7 +71,8 @@ const Productpage = () => {
   const handleImageClick = (newImage) => {
     setMainImage(newImage)
   }
-  return (
+
+  return product.Length > 0 ? (
     <>
       <div className="breadcrumbs">
         <p>
@@ -159,6 +161,10 @@ const Productpage = () => {
           />
         </div>
       </div>
+    </>
+  ) : (
+    <>
+      <h1>Loading..</h1>
     </>
   )
 }
