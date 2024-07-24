@@ -16,8 +16,9 @@ const Shop = ({ catname: propCatname }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://www.jsonblob.com/api/jsonblob/1238790362385735680")
-        let filteredProducts = response.data
+        const response = await axios.get("https://www.jsonblob.com/api/jsonblob/1262022017191632896")
+        let filteredProducts = response.data.products
+        console.log(filteredProducts);
         console.log(catname)
 
         // Check if catname is undefined or matches predefined categories

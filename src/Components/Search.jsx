@@ -12,7 +12,7 @@ const Search = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/products/")
+        const response = await axios.get("https://www.jsonblob.com/api/jsonblob/1262022017191632896")
         setProducts(response.data)
       } catch (error) {
         console.error("Error fetching product details:", error)

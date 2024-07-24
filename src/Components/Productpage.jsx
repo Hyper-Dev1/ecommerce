@@ -18,9 +18,9 @@ const Productpage = () => {
 
   useEffect(() => {
     axios
-      .get(`https://www.jsonblob.com/api/jsonblob/1238790362385735680`)
+      .get(`https://www.jsonblob.com/api/jsonblob/1262022017191632896`)
       .then((response) => {
-        const filterProduct = response.data.filter((item) => id === item.id)
+        const filterProduct = response.data.products.filter((item) => id === item.id)
         setProduct(filterProduct[0])
         setMainImage(filterProduct[0].Image1)
       })

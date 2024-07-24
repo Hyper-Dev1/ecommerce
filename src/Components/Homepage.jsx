@@ -8,9 +8,9 @@ const Homepage = () => {
 
   useEffect(() => {
     axios
-      .get("https://www.jsonblob.com/api/jsonblob/1238790362385735680")
+      .get("https://www.jsonblob.com/api/jsonblob/1262022017191632896")
       .then((response) => {
-        setProducts(response.data)
+        setProducts(response.data.products)
       })
       .catch((error) => {
         console.error("Error fetching products:", error)

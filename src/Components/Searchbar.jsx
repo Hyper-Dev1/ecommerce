@@ -29,9 +29,9 @@ const Searchbar = ({ onSearch }) => {
         setSuggestions([])
         return
       }
-      const response = await axios.get("http://localhost:3001/products/")
+      const response = await axios.get("https://www.jsonblob.com/api/jsonblob/1262022017191632896")
       // Filter the suggestions based on the productName property
-      const filteredSuggestions = response.data.filter((item) =>
+      const filteredSuggestions = response.data.products.filter((item) =>
         item.ProductName.toLowerCase().includes(query.toLowerCase())
       )
       setSuggestions(filteredSuggestions.map((item) => item.ProductName))
