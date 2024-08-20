@@ -737,7 +737,7 @@ footer {
     }
 
     .search-bar {
-        width: 60rem;
+        width: 80vw;
         border: 0.15rem black solid;
         border-radius: 2rem;
         padding: 0 0.5rem 0 0.9rem;
@@ -1587,6 +1587,9 @@ footer {
         // text-align: center;
         // width: 50%;
 
+        .search-bar{
+            width: 60rem;
+        }
         .search-suggestion {
             top: 4rem;
             width: 50rem;

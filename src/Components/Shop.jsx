@@ -18,8 +18,8 @@ const Shop = ({ catname: propCatname }) => {
       try {
         const response = await axios.get("https://www.jsonblob.com/api/jsonblob/1262022017191632896")
         let filteredProducts = response.data.products
-        console.log(filteredProducts);
-        console.log(catname)
+        // console.log(filteredProducts);
+        // console.log(catname)
 
         // Check if catname is undefined or matches predefined categories
         if (
@@ -29,7 +29,7 @@ const Shop = ({ catname: propCatname }) => {
           // Apply category-based filters
           if (catname === "trending") {
             filteredProducts = filteredProducts.sort((a, b) => b.Sold - a.Sold)
-            console.log("catnamesold")
+            // console.log("catnamesold")
           } else if (catname === "latest") {
             filteredProducts = filteredProducts.sort(
               (a, b) => new Date(b.Updated) - new Date(a.Updated)
@@ -50,7 +50,7 @@ const Shop = ({ catname: propCatname }) => {
           filteredProducts = filteredProducts.filter(
             (product) => product.Category === catname
           )
-          console.log("catname")
+          // console.log("catname")
         }
 
         // Apply search filter if searchValue is available
@@ -60,7 +60,7 @@ const Shop = ({ catname: propCatname }) => {
               searchValue.toLowerCase()
             )
           )
-          console.log(searchValue);
+          // console.log(searchValue);
         }
 
         setProducts(filteredProducts)

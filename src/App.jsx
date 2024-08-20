@@ -5,7 +5,7 @@ import Shipping from "./Components/Shipping"
 import Cart from "./Components/Cart"
 import Shop from "./Components/Shop"
 import Wishlist from "./Components/Wishlist"
-import Search from "./Components/Search"
+// import Search from "./Components/Search"
 import { useSelector } from "react-redux"
 import Blank from "./Components/Blank"
 import { useState } from "react"
@@ -103,7 +103,7 @@ function App() {
           )}
           <div className="nav-buttons">
             <button>
-              <Link to="/shop/search">
+              <Link to="/shop/products/all">
                 <img src="/Assets/search-normal-1.svg" alt="Search" />
               </Link>
             </button>
@@ -134,7 +134,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/shop/cart" element={<Cart />} />
-          <Route path="/shop/search" element={<Search />} />
+          {/* <Route path="/shop/search" element={<ShopRoutes  />} /> */}
           <Route path="/shop/wishlist" element={<Wishlist />} />
           <Route path="/shop/cart/shipping" element={<Shipping />} />
           <Route path="/shop/*" element={<ShopRoutes />} />
